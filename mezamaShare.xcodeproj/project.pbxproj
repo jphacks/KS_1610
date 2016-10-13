@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66B2D9651DAF1042004BBEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9641DAF1042004BBEED /* AppDelegate.swift */; };
+		66B2D9671DAF1042004BBEED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9661DAF1042004BBEED /* ViewController.swift */; };
+		66B2D96A1DAF1042004BBEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D9681DAF1042004BBEED /* Main.storyboard */; };
+		66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96B1DAF1042004BBEED /* Assets.xcassets */; };
+		66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */; };
+		66B2D97A1DAF1042004BBEED /* mezamaShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9791DAF1042004BBEED /* mezamaShareTests.swift */; };
+		66B2D9851DAF1042004BBEED /* mezamaShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9841DAF1042004BBEED /* mezamaShareUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66B2D9761DAF1042004BBEED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66B2D9591DAF1042004BBEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66B2D9601DAF1042004BBEED;
+			remoteInfo = mezamaShare;
+		};
+		66B2D9811DAF1042004BBEED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66B2D9591DAF1042004BBEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66B2D9601DAF1042004BBEED;
+			remoteInfo = mezamaShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66B2D9611DAF1042004BBEED /* mezamaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mezamaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B2D9641DAF1042004BBEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66B2D9661DAF1042004BBEED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66B2D9691DAF1042004BBEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66B2D96B1DAF1042004BBEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66B2D96E1DAF1042004BBEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66B2D9701DAF1042004BBEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B2D9751DAF1042004BBEED /* mezamaShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mezamaShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B2D9791DAF1042004BBEED /* mezamaShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mezamaShareTests.swift; sourceTree = "<group>"; };
+		66B2D97B1DAF1042004BBEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B2D9801DAF1042004BBEED /* mezamaShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mezamaShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B2D9841DAF1042004BBEED /* mezamaShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mezamaShareUITests.swift; sourceTree = "<group>"; };
+		66B2D9861DAF1042004BBEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66B2D95E1DAF1042004BBEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B2D9721DAF1042004BBEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B2D97D1DAF1042004BBEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66B2D9581DAF1042004BBEED = {
+			isa = PBXGroup;
+			children = (
+				66B2D9631DAF1042004BBEED /* mezamaShare */,
+				66B2D9781DAF1042004BBEED /* mezamaShareTests */,
+				66B2D9831DAF1042004BBEED /* mezamaShareUITests */,
+				66B2D9621DAF1042004BBEED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66B2D9621DAF1042004BBEED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66B2D9611DAF1042004BBEED /* mezamaShare.app */,
+				66B2D9751DAF1042004BBEED /* mezamaShareTests.xctest */,
+				66B2D9801DAF1042004BBEED /* mezamaShareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66B2D9631DAF1042004BBEED /* mezamaShare */ = {
+			isa = PBXGroup;
+			children = (
+				66B2D9641DAF1042004BBEED /* AppDelegate.swift */,
+				66B2D9661DAF1042004BBEED /* ViewController.swift */,
+				66B2D9681DAF1042004BBEED /* Main.storyboard */,
+				66B2D96B1DAF1042004BBEED /* Assets.xcassets */,
+				66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */,
+				66B2D9701DAF1042004BBEED /* Info.plist */,
+			);
+			path = mezamaShare;
+			sourceTree = "<group>";
+		};
+		66B2D9781DAF1042004BBEED /* mezamaShareTests */ = {
+			isa = PBXGroup;
+			children = (
+				66B2D9791DAF1042004BBEED /* mezamaShareTests.swift */,
+				66B2D97B1DAF1042004BBEED /* Info.plist */,
+			);
+			path = mezamaShareTests;
+			sourceTree = "<group>";
+		};
+		66B2D9831DAF1042004BBEED /* mezamaShareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66B2D9841DAF1042004BBEED /* mezamaShareUITests.swift */,
+				66B2D9861DAF1042004BBEED /* Info.plist */,
+			);
+			path = mezamaShareUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66B2D9601DAF1042004BBEED /* mezamaShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B2D9891DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShare" */;
+			buildPhases = (
+				66B2D95D1DAF1042004BBEED /* Sources */,
+				66B2D95E1DAF1042004BBEED /* Frameworks */,
+				66B2D95F1DAF1042004BBEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mezamaShare;
+			productName = mezamaShare;
+			productReference = 66B2D9611DAF1042004BBEED /* mezamaShare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66B2D9741DAF1042004BBEED /* mezamaShareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B2D98C1DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShareTests" */;
+			buildPhases = (
+				66B2D9711DAF1042004BBEED /* Sources */,
+				66B2D9721DAF1042004BBEED /* Frameworks */,
+				66B2D9731DAF1042004BBEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66B2D9771DAF1042004BBEED /* PBXTargetDependency */,
+			);
+			name = mezamaShareTests;
+			productName = mezamaShareTests;
+			productReference = 66B2D9751DAF1042004BBEED /* mezamaShareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66B2D97F1DAF1042004BBEED /* mezamaShareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B2D98F1DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShareUITests" */;
+			buildPhases = (
+				66B2D97C1DAF1042004BBEED /* Sources */,
+				66B2D97D1DAF1042004BBEED /* Frameworks */,
+				66B2D97E1DAF1042004BBEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66B2D9821DAF1042004BBEED /* PBXTargetDependency */,
+			);
+			name = mezamaShareUITests;
+			productName = mezamaShareUITests;
+			productReference = 66B2D9801DAF1042004BBEED /* mezamaShareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66B2D9591DAF1042004BBEED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = AkkeyLab;
+				TargetAttributes = {
+					66B2D9601DAF1042004BBEED = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					66B2D9741DAF1042004BBEED = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 66B2D9601DAF1042004BBEED;
+					};
+					66B2D97F1DAF1042004BBEED = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 66B2D9601DAF1042004BBEED;
+					};
+				};
+			};
+			buildConfigurationList = 66B2D95C1DAF1042004BBEED /* Build configuration list for PBXProject "mezamaShare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66B2D9581DAF1042004BBEED;
+			productRefGroup = 66B2D9621DAF1042004BBEED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66B2D9601DAF1042004BBEED /* mezamaShare */,
+				66B2D9741DAF1042004BBEED /* mezamaShareTests */,
+				66B2D97F1DAF1042004BBEED /* mezamaShareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66B2D95F1DAF1042004BBEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */,
+				66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */,
+				66B2D96A1DAF1042004BBEED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B2D9731DAF1042004BBEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B2D97E1DAF1042004BBEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66B2D95D1DAF1042004BBEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B2D9671DAF1042004BBEED /* ViewController.swift in Sources */,
+				66B2D9651DAF1042004BBEED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B2D9711DAF1042004BBEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B2D97A1DAF1042004BBEED /* mezamaShareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B2D97C1DAF1042004BBEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B2D9851DAF1042004BBEED /* mezamaShareUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66B2D9771DAF1042004BBEED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66B2D9601DAF1042004BBEED /* mezamaShare */;
+			targetProxy = 66B2D9761DAF1042004BBEED /* PBXContainerItemProxy */;
+		};
+		66B2D9821DAF1042004BBEED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66B2D9601DAF1042004BBEED /* mezamaShare */;
+			targetProxy = 66B2D9811DAF1042004BBEED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66B2D9681DAF1042004BBEED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B2D9691DAF1042004BBEED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B2D96E1DAF1042004BBEED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66B2D9871DAF1042004BBEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66B2D9881DAF1042004BBEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66B2D98A1DAF1042004BBEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mezamaShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		66B2D98B1DAF1042004BBEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mezamaShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66B2D98D1DAF1042004BBEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mezamaShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mezamaShare.app/mezamaShare";
+			};
+			name = Debug;
+		};
+		66B2D98E1DAF1042004BBEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mezamaShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mezamaShare.app/mezamaShare";
+			};
+			name = Release;
+		};
+		66B2D9901DAF1042004BBEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mezamaShareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mezamaShare;
+			};
+			name = Debug;
+		};
+		66B2D9911DAF1042004BBEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mezamaShareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mezamaShare;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66B2D95C1DAF1042004BBEED /* Build configuration list for PBXProject "mezamaShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B2D9871DAF1042004BBEED /* Debug */,
+				66B2D9881DAF1042004BBEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66B2D9891DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B2D98A1DAF1042004BBEED /* Debug */,
+				66B2D98B1DAF1042004BBEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66B2D98C1DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B2D98D1DAF1042004BBEED /* Debug */,
+				66B2D98E1DAF1042004BBEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66B2D98F1DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B2D9901DAF1042004BBEED /* Debug */,
+				66B2D9911DAF1042004BBEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66B2D9591DAF1042004BBEED /* Project object */;
+}
