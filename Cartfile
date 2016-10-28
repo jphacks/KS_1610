@@ -1,4 +1,4 @@
-git "https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git"
+# git "https://gitlab.akkeylab.com/akkey/iOS_PDFramework.#git"
 github "nttcom/SkyWay-iOS-SDK"
-github "realm/realm-cocoa" == 1.0.2
-github "SwiftyJSON/SwiftyJSON" == 2.3.1
+github "realm/realm-cocoa"
+github "SwiftyJSON/SwiftyJSON"
