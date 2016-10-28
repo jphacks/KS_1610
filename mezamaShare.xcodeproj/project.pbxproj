@@ -14,7 +14,6 @@
 		66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */; };
 		66B2D97A1DAF1042004BBEED /* mezamaShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9791DAF1042004BBEED /* mezamaShareTests.swift */; };
 		66B2D9851DAF1042004BBEED /* mezamaShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9841DAF1042004BBEED /* mezamaShareUITests.swift */; };
-		66B2D9931DAF356E004BBEED /* PDFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9921DAF356E004BBEED /* PDFramework.framework */; };
 		66B2D9951DAF357A004BBEED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9941DAF357A004BBEED /* Realm.framework */; };
 		66B2D9971DAF3597004BBEED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9961DAF3597004BBEED /* RealmSwift.framework */; };
 		66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */; };
@@ -51,7 +50,6 @@
 		66B2D9801DAF1042004BBEED /* mezamaShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mezamaShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B2D9841DAF1042004BBEED /* mezamaShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mezamaShareUITests.swift; sourceTree = "<group>"; };
 		66B2D9861DAF1042004BBEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66B2D9921DAF356E004BBEED /* PDFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFramework.framework; path = Carthage/Build/iOS/PDFramework.framework; sourceTree = "<group>"; };
 		66B2D9941DAF357A004BBEED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		66B2D9961DAF3597004BBEED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */,
 				66B2D9971DAF3597004BBEED /* RealmSwift.framework in Frameworks */,
 				66B2D9951DAF357A004BBEED /* Realm.framework in Frameworks */,
-				66B2D9931DAF356E004BBEED /* PDFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +89,6 @@
 				66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */,
 				66B2D9961DAF3597004BBEED /* RealmSwift.framework */,
 				66B2D9941DAF357A004BBEED /* Realm.framework */,
-				66B2D9921DAF356E004BBEED /* PDFramework.framework */,
 				66B2D9631DAF1042004BBEED /* mezamaShare */,
 				66B2D9781DAF1042004BBEED /* mezamaShareTests */,
 				66B2D9831DAF1042004BBEED /* mezamaShareUITests */,
@@ -279,7 +275,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/PDFramework.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
