@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */; };
-		66B2D9651DAF1042004BBEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9641DAF1042004BBEED /* AppDelegate.swift */; };
-		66B2D9671DAF1042004BBEED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9661DAF1042004BBEED /* ViewController.swift */; };
 		66B2D96A1DAF1042004BBEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D9681DAF1042004BBEED /* Main.storyboard */; };
 		66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96B1DAF1042004BBEED /* Assets.xcassets */; };
 		66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */; };
@@ -18,6 +16,8 @@
 		66B2D9951DAF357A004BBEED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9941DAF357A004BBEED /* Realm.framework */; };
 		66B2D9971DAF3597004BBEED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9961DAF3597004BBEED /* RealmSwift.framework */; };
 		66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */; };
+		EA2155791DC45EA80055643F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155781DC45EA80055643F /* ViewController.swift */; };
+		EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557A1DC45F0C0055643F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,6 @@
 /* Begin PBXFileReference section */
 		49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.debug.xcconfig"; sourceTree = "<group>"; };
 		66B2D9611DAF1042004BBEED /* mezamaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mezamaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66B2D9641DAF1042004BBEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66B2D9661DAF1042004BBEED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66B2D9691DAF1042004BBEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66B2D96B1DAF1042004BBEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66B2D96E1DAF1042004BBEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +57,8 @@
 		7E7124FA7F1C90E7F6F5775A /* Pods_mezamaShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA0801441509D84D3CE072 /* Pods-mezamaShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.release.xcconfig"; sourceTree = "<group>"; };
 		D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2155781DC45EA80055643F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Classes/ViewController/ViewController.swift; sourceTree = "<group>"; };
+		EA21557A1DC45F0C0055643F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 		EA21556F1DC4376B0055643F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				66B2D9641DAF1042004BBEED /* AppDelegate.swift */,
+				EA21557A1DC45F0C0055643F /* AppDelegate.swift */,
 				EA2155771DC437EA0055643F /* ViewController */,
 				EA2155761DC437DE0055643F /* View */,
 				EA2155751DC437BF0055643F /* ViewModel */,
@@ -232,7 +232,7 @@
 		EA2155771DC437EA0055643F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				66B2D9661DAF1042004BBEED /* ViewController.swift */,
+				EA2155781DC45EA80055643F /* ViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -384,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		66B2D99A1DAF35EA004BBEED /* ShellScript */ = {
@@ -440,8 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B2D9671DAF1042004BBEED /* ViewController.swift in Sources */,
-				66B2D9651DAF1042004BBEED /* AppDelegate.swift in Sources */,
+				EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */,
+				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
