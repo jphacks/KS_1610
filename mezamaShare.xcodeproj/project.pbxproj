@@ -26,6 +26,8 @@
 		EA2155831DC467170055643F /* WakeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155821DC467170055643F /* WakeUpViewController.swift */; };
 		EA2155851DC467A00055643F /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155841DC467A00055643F /* FightViewController.swift */; };
 		EA2155871DC467E20055643F /* EnterRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155861DC467E20055643F /* EnterRoomViewController.swift */; };
+		EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155881DC47F270055643F /* StampButtonView.swift */; };
+		EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2155891DC47F270055643F /* StampButtonView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		EA2155821DC467170055643F /* WakeUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WakeUpViewController.swift; path = Classes/ViewController/WakeUpViewController.swift; sourceTree = "<group>"; };
 		EA2155841DC467A00055643F /* FightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FightViewController.swift; path = Classes/ViewController/FightViewController.swift; sourceTree = "<group>"; };
 		EA2155861DC467E20055643F /* EnterRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterRoomViewController.swift; path = Classes/ViewController/EnterRoomViewController.swift; sourceTree = "<group>"; };
+		EA2155881DC47F270055643F /* StampButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StampButtonView.swift; path = Classes/View/StampButtonView.swift; sourceTree = "<group>"; };
+		EA2155891DC47F270055643F /* StampButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StampButtonView.xib; path = Classes/View/StampButtonView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,8 @@
 		EA2155761DC437DE0055643F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA2155881DC47F270055643F /* StampButtonView.swift */,
+				EA2155891DC47F270055643F /* StampButtonView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			files = (
 				66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */,
 				66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */,
+				EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */,
 				0D985D741DC471ED009EB50A /* bgm_01.mp3 in Resources */,
 				66B2D96A1DAF1042004BBEED /* Main.storyboard in Resources */,
 			);
@@ -481,6 +488,7 @@
 				EA21557F1DC465E20055643F /* CreateRoomViewController.swift in Sources */,
 				EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */,
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,
+				EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */,
 				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
