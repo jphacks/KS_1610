@@ -8,17 +8,42 @@
 
 import UIKit
 
-class StampButtonView: UITableViewCell {
+class StampButtonView: UIView {
     
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var button4: UIButton!
-    @IBOutlet weak var button5: UIButton!
-    @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var bkImage1: UIImageView!
+    @IBOutlet weak var bkImage2: UIImageView!
+    @IBOutlet weak var bkImage3: UIImageView!
+    @IBOutlet weak var bkImage4: UIImageView!
+    @IBOutlet weak var bkImage5: UIImageView!
+    @IBOutlet weak var bkImage6: UIImageView!
+    
+    // let audioPlay = AudioPlay()
+    // var audioPlayDelegate: AudioPlayDelegate? = nil
+    //
+    // audioPlayDelegate = audioPlay
+    // audioPlayDelegate?.setAudio(audioName: "bgm_01")
+    // audioPlayDelegate?.audioPlay(needsLoop: false)
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        buttonSetup()
+    }
+    
+    func buttonSetup(){
+        bkImage1.layer.cornerRadius = 10
+        bkImage2.layer.cornerRadius = 10
+        bkImage3.layer.cornerRadius = 10
+        bkImage4.layer.cornerRadius = 10
+        bkImage5.layer.cornerRadius = 10
+        bkImage6.layer.cornerRadius = 10
+        
+        bkImage1.image = UIImage(named: "buttonImage1")
+        bkImage2.image = UIImage(named: "buttonImage2")
+        bkImage3.image = UIImage(named: "buttonImage3")
+        bkImage4.image = UIImage(named: "buttonImage4")
+        bkImage5.image = UIImage(named: "buttonImage5")
+        bkImage6.image = UIImage(named: "buttonImage6")
     }
     
     @IBAction func onTapButton1(_ sender: AnyObject) {
