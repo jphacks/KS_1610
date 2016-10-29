@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D985D701DC46395009EB50A /* AudioPlay.swift */; };
 		0D985D741DC471ED009EB50A /* bgm_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D985D731DC471ED009EB50A /* bgm_01.mp3 */; };
+		0D985D7A1DC49A0A009EB50A /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D985D791DC49A0A009EB50A /* Id.swift */; };
 		3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */; };
 		66B2D96A1DAF1042004BBEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D9681DAF1042004BBEED /* Main.storyboard */; };
 		66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96B1DAF1042004BBEED /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		0D985D701DC46395009EB50A /* AudioPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlay.swift; path = Classes/ViewController/AudioPlay.swift; sourceTree = "<group>"; };
 		0D985D731DC471ED009EB50A /* bgm_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm_01.mp3; path = ../../../../Downloads/bgm_01.mp3; sourceTree = "<group>"; };
+		0D985D791DC49A0A009EB50A /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Id.swift; path = Classes/ViewController/Id.swift; sourceTree = "<group>"; };
 		49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.debug.xcconfig"; sourceTree = "<group>"; };
 		66B2D9611DAF1042004BBEED /* mezamaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mezamaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B2D9691DAF1042004BBEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		EA2155771DC437EA0055643F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0D985D791DC49A0A009EB50A /* Id.swift */,
 				0D985D701DC46395009EB50A /* AudioPlay.swift */,
 				EA2155781DC45EA80055643F /* ViewController.swift */,
 				EA21557C1DC465AD0055643F /* MainViewController.swift */,
@@ -481,6 +484,7 @@
 				EA21557F1DC465E20055643F /* CreateRoomViewController.swift in Sources */,
 				EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */,
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,
+				0D985D7A1DC49A0A009EB50A /* Id.swift in Sources */,
 				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
