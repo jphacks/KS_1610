@@ -8,14 +8,14 @@ target 'mezamaShare' do
   # Pods for mezamaShare
   pod 'SkyWay-iOS-SDK', '~> 0.2'
 
-  target 'mezamaShareTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  # target 'mezamaShareTests' do
+  #   inherit! :search_paths
+     # Pods for testing
+  # end
 
-  target 'mezamaShareUITests' do
-    inherit! :search_paths
+  # target 'mezamaShareUITests' do
+  #   inherit! :search_paths
     # Pods for testing
-  end
+  # end
 
 end

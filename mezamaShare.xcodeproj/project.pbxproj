@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02187D6EF414D25A202CAC9F /* Pods_mezamaShareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7124FA7F1C90E7F6F5775A /* Pods_mezamaShareTests.framework */; };
 		3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */; };
 		66B2D9651DAF1042004BBEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9641DAF1042004BBEED /* AppDelegate.swift */; };
 		66B2D9671DAF1042004BBEED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9661DAF1042004BBEED /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 		66B2D9951DAF357A004BBEED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9941DAF357A004BBEED /* Realm.framework */; };
 		66B2D9971DAF3597004BBEED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9961DAF3597004BBEED /* RealmSwift.framework */; };
 		66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */; };
-		96CAA1DFDF67ACA1C0564B32 /* Pods_mezamaShareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AFDA52917E66BA14A5B489 /* Pods_mezamaShareUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2BC7A9F1EBB4B21582D12A29 /* Pods-mezamaShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShareTests/Pods-mezamaShareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.debug.xcconfig"; sourceTree = "<group>"; };
-		4A4504AF7C0B1C8F9D1CBE4B /* Pods-mezamaShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShareUITests/Pods-mezamaShareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66B2D9611DAF1042004BBEED /* mezamaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mezamaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B2D9641DAF1042004BBEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B2D9661DAF1042004BBEED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,9 +58,7 @@
 		75AFDA52917E66BA14A5B489 /* Pods_mezamaShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7124FA7F1C90E7F6F5775A /* Pods_mezamaShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA0801441509D84D3CE072 /* Pods-mezamaShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.release.xcconfig"; sourceTree = "<group>"; };
-		A8D9030AE336B6FAEFFA3CA7 /* Pods-mezamaShareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShareUITests/Pods-mezamaShareUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB9E5963E5565A670A6A4530 /* Pods-mezamaShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShareTests/Pods-mezamaShareTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02187D6EF414D25A202CAC9F /* Pods_mezamaShareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96CAA1DFDF67ACA1C0564B32 /* Pods_mezamaShareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,10 +158,6 @@
 			children = (
 				49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */,
 				8ADA0801441509D84D3CE072 /* Pods-mezamaShare.release.xcconfig */,
-				2BC7A9F1EBB4B21582D12A29 /* Pods-mezamaShareTests.debug.xcconfig */,
-				DB9E5963E5565A670A6A4530 /* Pods-mezamaShareTests.release.xcconfig */,
-				A8D9030AE336B6FAEFFA3CA7 /* Pods-mezamaShareUITests.debug.xcconfig */,
-				4A4504AF7C0B1C8F9D1CBE4B /* Pods-mezamaShareUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -277,12 +265,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B2D98C1DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShareTests" */;
 			buildPhases = (
-				AD00D278215709E4057614B5 /* [CP] Check Pods Manifest.lock */,
 				66B2D9711DAF1042004BBEED /* Sources */,
 				66B2D9721DAF1042004BBEED /* Frameworks */,
 				66B2D9731DAF1042004BBEED /* Resources */,
-				178C804BBBF0757A6E7B4584 /* [CP] Embed Pods Frameworks */,
-				9B4DA2B31E6AA6D9DEC04910 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,12 +283,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B2D98F1DAF1042004BBEED /* Build configuration list for PBXNativeTarget "mezamaShareUITests" */;
 			buildPhases = (
-				41DDE943F4B7C100A101C523 /* [CP] Check Pods Manifest.lock */,
 				66B2D97C1DAF1042004BBEED /* Sources */,
 				66B2D97D1DAF1042004BBEED /* Frameworks */,
 				66B2D97E1DAF1042004BBEED /* Resources */,
-				E8194BB326BADA9BE58AFA8F /* [CP] Embed Pods Frameworks */,
-				0DA3ACFBF2E1B4FE937DE79F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,52 +372,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DA3ACFBF2E1B4FE937DE79F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mezamaShareUITests/Pods-mezamaShareUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		178C804BBBF0757A6E7B4584 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mezamaShareTests/Pods-mezamaShareTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2B2011F2661C556CDEB391C9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		41DDE943F4B7C100A101C523 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,36 +418,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B4DA2B31E6AA6D9DEC04910 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mezamaShareTests/Pods-mezamaShareTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD00D278215709E4057614B5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		D489F673062DAA3087320B50 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -524,21 +431,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8194BB326BADA9BE58AFA8F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mezamaShareUITests/Pods-mezamaShareUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -727,7 +619,6 @@
 		};
 		66B2D98D1DAF1042004BBEED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BC7A9F1EBB4B21582D12A29 /* Pods-mezamaShareTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = mezamaShareTests/Info.plist;
@@ -741,7 +632,6 @@
 		};
 		66B2D98E1DAF1042004BBEED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB9E5963E5565A670A6A4530 /* Pods-mezamaShareTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = mezamaShareTests/Info.plist;
@@ -755,7 +645,6 @@
 		};
 		66B2D9901DAF1042004BBEED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8D9030AE336B6FAEFFA3CA7 /* Pods-mezamaShareUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = mezamaShareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -768,7 +657,6 @@
 		};
 		66B2D9911DAF1042004BBEED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A4504AF7C0B1C8F9D1CBE4B /* Pods-mezamaShareUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = mezamaShareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
