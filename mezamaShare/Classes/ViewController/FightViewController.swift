@@ -9,11 +9,16 @@
 import UIKit
 
 class FightViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let view:UIView  = UINib(nibName: "StampButtonView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        menuView.addSubview(view)
+        menuView.contentMode = .scaleAspectFit
     }
 
     override func didReceiveMemoryWarning() {
