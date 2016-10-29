@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mezamaShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="mezamaShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="1404" y="441.22938530734638"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Room View Controller-->
         <scene sceneID="eMY-Aj-ZAw">
             <objects>
-                <viewController id="0c4-xy-EBT" sceneMemberID="viewController">
+                <viewController id="0c4-xy-EBT" customClass="CreateRoomViewController" customModule="mezamaShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4M4-TO-TfD"/>
                         <viewControllerLayoutGuide type="bottom" id="fFW-up-RXb"/>
@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="2093.5999999999999" y="441.22938530734638"/>
         </scene>
-        <!--View Controller-->
+        <!--Enter Room View Controller-->
         <scene sceneID="g5g-0W-4Y1">
             <objects>
-                <viewController id="FXg-oL-dfz" sceneMemberID="viewController">
+                <viewController id="FXg-oL-dfz" customClass="EnterRoomViewController" customModule="mezamaShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hy3-IP-Uqv"/>
                         <viewControllerLayoutGuide type="bottom" id="WPu-zw-fQj"/>
@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="1155" y="1155"/>
         </scene>
-        <!--View Controller-->
+        <!--Wait Time View Controller-->
         <scene sceneID="fGx-DI-Jnb">
             <objects>
-                <viewController id="kVg-vh-gld" sceneMemberID="viewController">
+                <viewController id="kVg-vh-gld" customClass="WaitTimeViewController" customModule="mezamaShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sEe-dL-0v8"/>
                         <viewControllerLayoutGuide type="bottom" id="igN-ar-KUC"/>
@@ -320,10 +320,10 @@
             </objects>
             <point key="canvasLocation" x="2791.1999999999998" y="441.22938530734638"/>
         </scene>
-        <!--View Controller-->
+        <!--Wake Up View Controller-->
         <scene sceneID="BGI-vm-cWc">
             <objects>
-                <viewController id="A1B-M6-7Wl" sceneMemberID="viewController">
+                <viewController id="A1B-M6-7Wl" customClass="WakeUpViewController" customModule="mezamaShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Myi-ml-6kr"/>
                         <viewControllerLayoutGuide type="bottom" id="Wbz-HM-aNs"/>
@@ -389,10 +389,10 @@
             </objects>
             <point key="canvasLocation" x="3495.1999999999998" y="441.22938530734638"/>
         </scene>
-        <!--View Controller-->
+        <!--Fight View Controller-->
         <scene sceneID="tY5-RX-qJv">
             <objects>
-                <viewController id="qDl-aD-xhC" sceneMemberID="viewController">
+                <viewController id="qDl-aD-xhC" customClass="FightViewController" customModule="mezamaShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oaq-IT-5ur"/>
                         <viewControllerLayoutGuide type="bottom" id="P1p-bk-7Jr"/>

@@ -20,6 +20,12 @@
 		66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */; };
 		EA2155791DC45EA80055643F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155781DC45EA80055643F /* ViewController.swift */; };
 		EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557A1DC45F0C0055643F /* AppDelegate.swift */; };
+		EA21557D1DC465AD0055643F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557C1DC465AD0055643F /* MainViewController.swift */; };
+		EA21557F1DC465E20055643F /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557E1DC465E20055643F /* CreateRoomViewController.swift */; };
+		EA2155811DC4664B0055643F /* WaitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155801DC4664B0055643F /* WaitTimeViewController.swift */; };
+		EA2155831DC467170055643F /* WakeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155821DC467170055643F /* WakeUpViewController.swift */; };
+		EA2155851DC467A00055643F /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155841DC467A00055643F /* FightViewController.swift */; };
+		EA2155871DC467E20055643F /* EnterRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155861DC467E20055643F /* EnterRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2155781DC45EA80055643F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Classes/ViewController/ViewController.swift; sourceTree = "<group>"; };
 		EA21557A1DC45F0C0055643F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
+		EA21557C1DC465AD0055643F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/ViewController/MainViewController.swift; sourceTree = "<group>"; };
+		EA21557E1DC465E20055643F /* CreateRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateRoomViewController.swift; path = Classes/ViewController/CreateRoomViewController.swift; sourceTree = "<group>"; };
+		EA2155801DC4664B0055643F /* WaitTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitTimeViewController.swift; path = Classes/ViewController/WaitTimeViewController.swift; sourceTree = "<group>"; };
+		EA2155821DC467170055643F /* WakeUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WakeUpViewController.swift; path = Classes/ViewController/WakeUpViewController.swift; sourceTree = "<group>"; };
+		EA2155841DC467A00055643F /* FightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FightViewController.swift; path = Classes/ViewController/FightViewController.swift; sourceTree = "<group>"; };
+		EA2155861DC467E20055643F /* EnterRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterRoomViewController.swift; path = Classes/ViewController/EnterRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +259,12 @@
 			children = (
 				0D985D701DC46395009EB50A /* AudioPlay.swift */,
 				EA2155781DC45EA80055643F /* ViewController.swift */,
+				EA21557C1DC465AD0055643F /* MainViewController.swift */,
+				EA21557E1DC465E20055643F /* CreateRoomViewController.swift */,
+				EA2155801DC4664B0055643F /* WaitTimeViewController.swift */,
+				EA2155821DC467170055643F /* WakeUpViewController.swift */,
+				EA2155841DC467A00055643F /* FightViewController.swift */,
+				EA2155861DC467E20055643F /* EnterRoomViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -455,6 +473,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2155811DC4664B0055643F /* WaitTimeViewController.swift in Sources */,
+				EA2155831DC467170055643F /* WakeUpViewController.swift in Sources */,
+				EA2155871DC467E20055643F /* EnterRoomViewController.swift in Sources */,
+				EA2155851DC467A00055643F /* FightViewController.swift in Sources */,
+				EA21557D1DC465AD0055643F /* MainViewController.swift in Sources */,
+				EA21557F1DC465E20055643F /* CreateRoomViewController.swift in Sources */,
 				EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */,
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,
 				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,
