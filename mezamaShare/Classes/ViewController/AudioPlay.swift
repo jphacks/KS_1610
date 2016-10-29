@@ -50,10 +50,15 @@ class AudioPlay: AudioPlayDelegate {
     func audioStop() {
         audioPlayer.stop()
     }
+    
+    func audioVolume(level: Float) {
+        audioPlayer.volume = level
+    }
 }
 
 protocol AudioPlayDelegate {
     func setAudio(audioName: String) -> Void
     func audioPlay(needsLoop: Bool) -> Void
     func audioStop() -> Void
+    func audioVolume(level: Float) -> Void
 }
