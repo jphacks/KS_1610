@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StampButtonView: UIView {
+class StampButtonView: UITableViewCell {
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -16,6 +16,10 @@ class StampButtonView: UIView {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     @IBOutlet weak var button6: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     @IBAction func onTapButton1(_ sender: AnyObject) {
     }

@@ -8,12 +8,43 @@
 
 import UIKit
 
-class FightViewController: UIViewController {
+class FightViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        settingButtonCell()
+    }
+    
+    func settingButtonCell(){
+        let nib = UINib(nibName: "StampButtonView", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "StampButtonCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 20
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Select
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StampButtonCell", for: indexPath as IndexPath) as! StampButtonView
+        cell.selectionStyle = .none
+        
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
