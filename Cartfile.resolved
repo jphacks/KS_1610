@@ -1,3 +1,2 @@
-github "nttcom/SkyWay-iOS-SDK" "v0.2.2"
 github "SwiftyJSON/SwiftyJSON" "v3.1.1"
 github "realm/realm-cocoa" "v2.0.3"
