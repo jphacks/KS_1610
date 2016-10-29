@@ -1,4 +1,5 @@
 # git "https://gitlab.akkeylab.com/akkey/iOS_PDFramework.#git"
-github "nttcom/SkyWay-iOS-SDK"
+# github "nttcom/SkyWay-iOS-SDK"
+# github "nttcom/SkyWay-MultiParty-iOS"
 github "realm/realm-cocoa"
 github "SwiftyJSON/SwiftyJSON"
