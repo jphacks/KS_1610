@@ -60,9 +60,9 @@ class PeerListForDataViewController: UITableViewController {
 //                    })
 //                }
 
-                if (self.callback?.responds(to: #selector(CreateRoomViewController.connect(_:))))! == true {
+                if (self.callback?.responds(to: #selector(MainViewController.connect(_:))))! == true {
                     DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background).async(execute: { () -> Void in
-                        let view = self.callback as! CreateRoomViewController
+                        let view = self.callback as! MainViewController
                         view.connect(strTo)
                     })
                 }
