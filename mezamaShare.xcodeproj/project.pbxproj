@@ -29,6 +29,8 @@
 		EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155881DC47F270055643F /* StampButtonView.swift */; };
 		EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2155891DC47F270055643F /* StampButtonView.xib */; };
 		EA21558F1DC495020055643F /* bgm_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA21558E1DC495020055643F /* bgm_01.mp3 */; };
+		EA35B9A91DC57ED700625E17 /* PeerListForDataViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */; };
+		EA35B9AB1DC57EE400625E17 /* PeerListForDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		EA2155891DC47F270055643F /* StampButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StampButtonView.xib; path = Classes/View/StampButtonView.xib; sourceTree = "<group>"; };
 		EA21558E1DC495020055643F /* bgm_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm_01.mp3; path = Resources/Audio/bgm_01.mp3; sourceTree = "<group>"; };
 		EA2155901DC509FF0055643F /* mezamaShare_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mezamaShare_Bridging_Header.h; sourceTree = "<group>"; };
+		EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PeerListForDataViewController.storyboard; path = Classes/Layout/PeerListForDataViewController.storyboard; sourceTree = "<group>"; };
+		EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeerListForDataViewController.swift; path = Classes/ViewController/PeerListForDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,7 @@
 		EA2155711DC437900055643F /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */,
 				66B2D9681DAF1042004BBEED /* Main.storyboard */,
 				66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */,
 			);
@@ -267,6 +272,7 @@
 		EA2155771DC437EA0055643F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */,
 				0D985D791DC49A0A009EB50A /* Id.swift */,
 				0D985D701DC46395009EB50A /* AudioPlay.swift */,
 				EA2155781DC45EA80055643F /* ViewController.swift */,
@@ -397,6 +403,7 @@
 				66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */,
 				EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */,
 				66B2D96A1DAF1042004BBEED /* Main.storyboard in Resources */,
+				EA35B9A91DC57ED700625E17 /* PeerListForDataViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +502,7 @@
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,
 				EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */,
 				0D985D7A1DC49A0A009EB50A /* Id.swift in Sources */,
+				EA35B9AB1DC57EE400625E17 /* PeerListForDataViewController.swift in Sources */,
 				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,8 +655,10 @@
 				);
 				INFOPLIST_FILE = mezamaShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = mezamaShare/mezamaShare_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -665,8 +675,10 @@
 				);
 				INFOPLIST_FILE = mezamaShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mezamaShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = mezamaShare/mezamaShare_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
