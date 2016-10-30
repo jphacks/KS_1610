@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartUpViewController" customModule="mezamaShare" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StartUpViewController" customModule="mezamaShare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoImage" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-cC-5Kf">
+                    <rect key="frame" x="16" y="20" width="343" height="343"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eaW-cC-5Kf" secondAttribute="height" multiplier="1:1" id="Dq1-eG-bif"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makeroomImage" translatesAutoresizingMaskIntoConstraints="NO" id="p7E-Bx-dPV">
+                    <rect key="frame" x="16" y="371" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="p7E-Bx-dPV" secondAttribute="height" multiplier="343:40" id="Fbi-cA-glc"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joinroomImage" translatesAutoresizingMaskIntoConstraints="NO" id="YDU-GW-Yzx">
+                    <rect key="frame" x="16" y="419" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="YDU-GW-Yzx" secondAttribute="height" multiplier="343:40" id="nEK-n4-AMN"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVw-HM-j8g">
+                    <rect key="frame" x="16" y="371" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CVw-HM-j8g" secondAttribute="height" multiplier="343:40" id="AOB-pY-L6I"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMa-Qb-LZy">
+                    <rect key="frame" x="16" y="419" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="oMa-Qb-LZy" secondAttribute="height" multiplier="343:40" id="aTS-qx-a5t"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.12549019610000001" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="p7E-Bx-dPV" firstAttribute="top" secondItem="eaW-cC-5Kf" secondAttribute="bottom" constant="8" id="4X5-R4-qHX"/>
+                <constraint firstItem="YDU-GW-Yzx" firstAttribute="top" secondItem="p7E-Bx-dPV" secondAttribute="bottom" constant="8" id="80D-y5-yAZ"/>
+                <constraint firstAttribute="trailing" secondItem="CVw-HM-j8g" secondAttribute="trailing" constant="16" id="8xf-YO-tQD"/>
+                <constraint firstAttribute="trailing" secondItem="YDU-GW-Yzx" secondAttribute="trailing" constant="16" id="AyA-ug-G1Y"/>
+                <constraint firstItem="p7E-Bx-dPV" firstAttribute="top" secondItem="eaW-cC-5Kf" secondAttribute="bottom" constant="8" id="B7x-C9-yio"/>
+                <constraint firstItem="CVw-HM-j8g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Opb-F5-Ul1"/>
+                <constraint firstItem="p7E-Bx-dPV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="RnY-4L-OUW"/>
+                <constraint firstAttribute="trailing" secondItem="p7E-Bx-dPV" secondAttribute="trailing" constant="16" id="SRq-wI-JGm"/>
+                <constraint firstItem="oMa-Qb-LZy" firstAttribute="top" secondItem="CVw-HM-j8g" secondAttribute="bottom" constant="8" id="Vhz-pn-Kcl"/>
+                <constraint firstAttribute="trailing" secondItem="eaW-cC-5Kf" secondAttribute="trailing" constant="16" id="ZCr-u2-RT0"/>
+                <constraint firstItem="eaW-cC-5Kf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="aCf-fF-FUp"/>
+                <constraint firstItem="YDU-GW-Yzx" firstAttribute="top" secondItem="CVw-HM-j8g" secondAttribute="bottom" constant="8" id="c0z-Nj-rtp"/>
+                <constraint firstItem="oMa-Qb-LZy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="g0C-Wm-u3R"/>
+                <constraint firstItem="YDU-GW-Yzx" firstAttribute="top" secondItem="p7E-Bx-dPV" secondAttribute="bottom" constant="8" id="jY1-Fb-hcF"/>
+                <constraint firstItem="YDU-GW-Yzx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="llS-nX-Pfu"/>
+                <constraint firstItem="CVw-HM-j8g" firstAttribute="top" secondItem="eaW-cC-5Kf" secondAttribute="bottom" constant="8" id="nG5-ki-yaY"/>
+                <constraint firstAttribute="trailing" secondItem="oMa-Qb-LZy" secondAttribute="trailing" constant="16" id="poZ-2h-g8P"/>
+                <constraint firstItem="eaW-cC-5Kf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="vva-4y-DK5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="homeEnterRoom" destination="oMa-Qb-LZy" id="MH3-ig-i1e"/>
+                <outlet property="homeMakeRoom" destination="CVw-HM-j8g" id="Qv8-om-yfj"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="joinroomImage" width="258" height="70"/>
+        <image name="logoImage" width="1485" height="855"/>
+        <image name="makeroomImage" width="258" height="70"/>
+    </resources>
+</document>

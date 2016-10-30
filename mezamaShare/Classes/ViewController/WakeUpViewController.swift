@@ -8,28 +8,12 @@
 
 import UIKit
 
-class WakeUpViewController: UIViewController {
+class WakeUpViewController: UIView {
+    @IBOutlet weak var fightButton: UIButton!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        fightButton.addTarget(MainViewController(), action: #selector(MainViewController.onFight(sender:)), for: .touchUpInside)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
