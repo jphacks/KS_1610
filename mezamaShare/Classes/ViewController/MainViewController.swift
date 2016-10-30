@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
     fileprivate var _listPeerIds: Array<String> = []
     
     private var myID: String = ""
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class MainViewController: UIViewController {
         webRTC()
         //        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: Selector(("onTimer:")), userInfo: nil, repeats: true)
         
-        let view:UIView  = UINib(nibName: "CreateRoomView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        let view:UIView  = UINib(nibName: "StartUpView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = mainView.bounds
         view.translatesAutoresizingMaskIntoConstraints = true
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
@@ -200,12 +201,59 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController {
+    func onHomeMakeRoom(sender: UIButton) {
+        let view:UIView  = UINib(nibName: "CreateRoomView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        mainView.addSubview(view)
+    }
+    
+    func onHomeEnterRoom(sender: UIButton) {
+        let view:UIView  = UINib(nibName: "EnterRoomView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        mainView.addSubview(view)
+    }
+    
     func onMakrRoom(sender: UIButton) {
-        
+        let view:UIView  = UINib(nibName: "WaitTimeView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        mainView.addSubview(view)
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
+        // timer.fire()
     }
     
     func onEnterRoom(sender: UIButton) {
-        
+        let view:UIView  = UINib(nibName: "WaitTimeView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        mainView.addSubview(view)
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
+        // timer.fire()
     }
     
+    func onFight(sender: UIButton) {
+        let view:UIView  = UINib(nibName: "StampButtonView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        mainView.addSubview(view)
+    }
+    
+    func onReturn(sender: UIButton) {
+    
+    }
+    
+    func update(tm: Timer) {
+        let view:UIView  = UINib(nibName: "WakeUpView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        mainView.addSubview(view)
+    }
 }

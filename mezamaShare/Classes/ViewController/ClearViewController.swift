@@ -10,4 +10,11 @@ import UIKit
 
 class ClearViewController: UIView {
 
+    @IBOutlet weak var returnButton: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        returnButton.addTarget(MainViewController(), action: #selector(MainViewController.onReturn(sender:)), for: .touchUpInside)
+    }
 }

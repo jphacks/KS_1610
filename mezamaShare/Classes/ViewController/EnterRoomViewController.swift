@@ -9,5 +9,11 @@
 import UIKit
 
 class EnterRoomViewController: UIView {
+    @IBOutlet weak var enterButton: UIButton!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        enterButton.addTarget(MainViewController(), action: #selector(MainViewController.onEnterRoom(sender:)), for: .touchUpInside)
+    }
 }

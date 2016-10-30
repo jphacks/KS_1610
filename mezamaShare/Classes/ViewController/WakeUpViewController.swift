@@ -9,5 +9,11 @@
 import UIKit
 
 class WakeUpViewController: UIView {
+    @IBOutlet weak var fightButton: UIButton!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        fightButton.addTarget(MainViewController(), action: #selector(MainViewController.onFight(sender:)), for: .touchUpInside)
+    }
 }
