@@ -16,6 +16,7 @@ class StampButtonView: UIView {
     @IBOutlet weak var bkImage4: UIImageView!
     @IBOutlet weak var bkImage5: UIImageView!
     @IBOutlet weak var bkImage6: UIImageView!
+    let audioPlay = AudioPlay()
     
     // let audioPlay = AudioPlay()
     // var audioPlayDelegate: AudioPlayDelegate? = nil
@@ -47,20 +48,46 @@ class StampButtonView: UIView {
     }
     
     @IBAction func onTapButton1(_ sender: AnyObject) {
+        var audioPlayDelegate: AudioPlayDelegate? = nil
+        
+        audioPlayDelegate = audioPlay
+        audioPlayDelegate?.setAudio(audioName: "mezamashare_zugyuuuun")
+        audioPlayDelegate?.audioPlay(needsLoop: false)
     }
     
     @IBAction func onTapButton2(_ sender: AnyObject) {
+        var audioPlayDelegate: AudioPlayDelegate? = nil
+        
+        audioPlayDelegate = audioPlay
+        audioPlayDelegate?.setAudio(audioName: "mezamashare_ppap4")
+        audioPlayDelegate?.audioPlay(needsLoop: false)
     }
     
-    @IBAction func onTapButton3(_ sender: AnyObject) {
+    @IBAction func onTapButton3(_ sender: Any) {
+        var audioPlayDelegate: AudioPlayDelegate? = nil
+        
+        audioPlayDelegate = audioPlay
+        audioPlayDelegate?.setAudio(audioName: "mezamashare_okiro")
+        audioPlayDelegate?.audioPlay(needsLoop: false)
     }
     
-    @IBAction func onTapButton4(_ sender: AnyObject) {
+    @IBAction func onTapButton4(_ sender: Any) {
+        var audioPlayDelegate: AudioPlayDelegate? = nil
+        
+        audioPlayDelegate = audioPlay
+        audioPlayDelegate?.setAudio(audioName: "mezamashare_sukida")
+        audioPlayDelegate?.audioPlay(needsLoop: false)
     }
     
     @IBAction func onTapButton5(_ sender: AnyObject) {
+        
     }
     
     @IBAction func onTapButton6(_ sender: AnyObject) {
+//        var audioPlayDelegate: AudioPlayDelegate? = nil
+//        
+//        audioPlayDelegate = audioPlay
+//        audioPlayDelegate?.setAudio(audioName: "bgm_01")
+//        audioPlayDelegate?.audioPlay(needsLoop: true)
     }
 }

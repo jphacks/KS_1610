@@ -13,11 +13,13 @@ class CreateRoomViewController: UIView {
     @IBOutlet weak var hour: UILabel!
     @IBOutlet weak var minites: UILabel!
     @IBOutlet weak var makeButton: UIButton!
+    @IBOutlet weak var inputID: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
         makeButton.addTarget(MainViewController(), action: #selector(MainViewController.onMakrRoom(sender:)), for: .touchUpInside)
+        inputID.addTarget(MainViewController(), action: #selector(MainViewController.onInputID(sender:)), for: .touchUpInside)
     }
     
     @IBAction func onHour(_ sender: Any) {

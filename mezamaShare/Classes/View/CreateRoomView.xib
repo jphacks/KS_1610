@@ -108,9 +108,13 @@
                         <action selector="omMinites:" destination="iN0-l3-epB" eventType="valueChanged" id="TuC-0J-KlK"/>
                     </connections>
                 </stepper>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElJ-i8-hM3">
+                    <rect key="frame" x="18" y="101" width="341" height="21"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.12549019607843137" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ElJ-i8-hM3" firstAttribute="top" secondItem="its-bp-LEQ" secondAttribute="bottom" constant="8" id="0hp-Aw-eFy"/>
                 <constraint firstItem="weT-Lq-prh" firstAttribute="leading" secondItem="LlC-zr-9Kg" secondAttribute="trailing" constant="11" id="13L-1o-waV"/>
                 <constraint firstItem="LlC-zr-9Kg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="15p-GX-BTl"/>
                 <constraint firstItem="its-bp-LEQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="2eh-Et-I82"/>
@@ -121,6 +125,7 @@
                 <constraint firstItem="7F9-d4-CHt" firstAttribute="top" secondItem="fRU-96-rIT" secondAttribute="bottom" constant="8" id="A9J-G1-mjp"/>
                 <constraint firstItem="1cd-y8-duM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Ahu-dF-Lyh"/>
                 <constraint firstItem="I1R-Pz-bbV" firstAttribute="top" secondItem="7F9-d4-CHt" secondAttribute="bottom" constant="12" id="DVw-hf-IRF"/>
+                <constraint firstItem="7F9-d4-CHt" firstAttribute="top" secondItem="ElJ-i8-hM3" secondAttribute="bottom" constant="8" id="FMu-Sk-e2W"/>
                 <constraint firstItem="its-bp-LEQ" firstAttribute="top" secondItem="eLl-Cx-H1S" secondAttribute="bottom" constant="8" id="Gjm-iP-t3O"/>
                 <constraint firstItem="its-bp-LEQ" firstAttribute="top" secondItem="eLl-Cx-H1S" secondAttribute="bottom" constant="8" id="Hvu-OS-lGX"/>
                 <constraint firstItem="RYV-0m-T3P" firstAttribute="centerY" secondItem="2RQ-3j-bq6" secondAttribute="centerY" id="Kkz-gg-Vdw"/>
@@ -139,6 +144,8 @@
                 <constraint firstItem="2RQ-3j-bq6" firstAttribute="leading" secondItem="I1R-Pz-bbV" secondAttribute="trailing" constant="8" id="VUJ-Iz-tzW"/>
                 <constraint firstItem="RYV-0m-T3P" firstAttribute="centerY" secondItem="I1R-Pz-bbV" secondAttribute="centerY" id="VyD-mQ-HbK"/>
                 <constraint firstAttribute="trailing" secondItem="1cd-y8-duM" secondAttribute="trailing" constant="16" id="Wgj-a8-WvG"/>
+                <constraint firstItem="ElJ-i8-hM3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="apm-I5-uuo"/>
+                <constraint firstAttribute="trailing" secondItem="ElJ-i8-hM3" secondAttribute="trailing" constant="16" id="bb3-ks-VIP"/>
                 <constraint firstItem="Dhk-eB-3Xk" firstAttribute="leading" secondItem="weT-Lq-prh" secondAttribute="trailing" constant="8" id="dKM-a9-lPP"/>
                 <constraint firstItem="RYV-0m-T3P" firstAttribute="leading" secondItem="Dhk-eB-3Xk" secondAttribute="leading" id="ie7-cz-zAU"/>
                 <constraint firstAttribute="trailing" secondItem="eLl-Cx-H1S" secondAttribute="trailing" id="im5-oA-QQo"/>
@@ -162,6 +169,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="hour" destination="I1R-Pz-bbV" id="X2e-sE-WWL"/>
+                <outlet property="inputID" destination="ElJ-i8-hM3" id="pcn-E1-Stw"/>
                 <outlet property="makeButton" destination="kLP-1Z-6ce" id="zlC-zR-5wZ"/>
                 <outlet property="minites" destination="LlC-zr-9Kg" id="iCE-VY-R5f"/>
             </connections>

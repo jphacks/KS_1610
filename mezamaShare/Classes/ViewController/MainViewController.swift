@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
     
     private var myID: String = ""
     var timer: Timer!
+    let audioPlay = AudioPlay()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -176,11 +177,11 @@ class MainViewController: UIViewController {
         //            self.send("OK??")
         //        }
         
-        //        if _data == nil {
-        //            self.getPeerList()
-        //        } else {
-        //            self.performSelector(inBackground: #selector(CreateRoomViewController.close), with: nil)
-        //        }
+//                if _data == nil {
+//                    self.getPeerList()
+//                } else {
+//                    self.performSelector(inBackground: #selector(CreateRoomViewController.close), with: nil)
+//                }
     }
     
     override func didReceiveMemoryWarning() {
@@ -243,6 +244,20 @@ extension MainViewController {
         view.translatesAutoresizingMaskIntoConstraints = true
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         mainView.addSubview(view)
+        
+        var audioPlayDelegate: AudioPlayDelegate? = nil
+        audioPlayDelegate = audioPlay
+        audioPlayDelegate?.setAudio(audioName: "bgm_01")
+        audioPlayDelegate?.audioPlay(needsLoop: true)
+    }
+    
+    
+    func onInputID(sender: UIButton) {
+        if _data == nil {
+            self.getPeerList()
+        } else {
+            self.performSelector(inBackground: #selector(MainViewController.close), with: nil)
+        }
     }
     
     func onReturn(sender: UIButton) {
@@ -255,5 +270,10 @@ extension MainViewController {
         view.translatesAutoresizingMaskIntoConstraints = true
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         mainView.addSubview(view)
+        
+        var audioPlayDelegate: AudioPlayDelegate? = nil
+        audioPlayDelegate = audioPlay
+        audioPlayDelegate?.setAudio(audioName: "bgm_01")
+        audioPlayDelegate?.audioPlay(needsLoop: true)
     }
 }

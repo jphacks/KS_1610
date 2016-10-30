@@ -15,5 +15,12 @@ class WakeUpViewController: UIView {
         super.awakeFromNib()
         
         fightButton.addTarget(MainViewController(), action: #selector(MainViewController.onFight(sender:)), for: .touchUpInside)
+        
+        let audioPlay = AudioPlay()
+        var audioPlayDelegate: AudioPlayDelegate? = nil
+        
+        audioPlayDelegate = audioPlay
+        audioPlayDelegate?.setAudio(audioName: "bgm_01")
+        audioPlayDelegate?.audioPlay(needsLoop: true)
     }
 }

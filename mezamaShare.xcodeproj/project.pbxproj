@@ -39,6 +39,11 @@
 		EA35B9BA1DC5AEA200625E17 /* StartUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9B91DC5AEA200625E17 /* StartUpView.xib */; };
 		EA35B9BC1DC5B13500625E17 /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35B9BB1DC5B13500625E17 /* StartUpViewController.swift */; };
 		EA35B9BE1DC5B2E500625E17 /* ClearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35B9BD1DC5B2E500625E17 /* ClearViewController.swift */; };
+		EA35B9C41DC5C1D700625E17 /* mezamashare_good-morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9BF1DC5C1D700625E17 /* mezamashare_good-morning.mp3 */; };
+		EA35B9C51DC5C1D700625E17 /* mezamashare_okiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9C01DC5C1D700625E17 /* mezamashare_okiro.mp3 */; };
+		EA35B9C61DC5C1D700625E17 /* mezamashare_ppap4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9C11DC5C1D700625E17 /* mezamashare_ppap4.mp3 */; };
+		EA35B9C71DC5C1D700625E17 /* mezamashare_sukida.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9C21DC5C1D700625E17 /* mezamashare_sukida.mp3 */; };
+		EA35B9C81DC5C1D700625E17 /* mezamashare_zugyuuuun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9C31DC5C1D700625E17 /* mezamashare_zugyuuuun.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +107,11 @@
 		EA35B9B91DC5AEA200625E17 /* StartUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StartUpView.xib; path = Classes/View/StartUpView.xib; sourceTree = "<group>"; };
 		EA35B9BB1DC5B13500625E17 /* StartUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartUpViewController.swift; path = Classes/ViewController/StartUpViewController.swift; sourceTree = "<group>"; };
 		EA35B9BD1DC5B2E500625E17 /* ClearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClearViewController.swift; path = Classes/ViewController/ClearViewController.swift; sourceTree = "<group>"; };
+		EA35B9BF1DC5C1D700625E17 /* mezamashare_good-morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mezamashare_good-morning.mp3"; sourceTree = "<group>"; };
+		EA35B9C01DC5C1D700625E17 /* mezamashare_okiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mezamashare_okiro.mp3; sourceTree = "<group>"; };
+		EA35B9C11DC5C1D700625E17 /* mezamashare_ppap4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mezamashare_ppap4.mp3; sourceTree = "<group>"; };
+		EA35B9C21DC5C1D700625E17 /* mezamashare_sukida.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mezamashare_sukida.mp3; sourceTree = "<group>"; };
+		EA35B9C31DC5C1D700625E17 /* mezamashare_zugyuuuun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mezamashare_zugyuuuun.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,11 @@
 		0D985D721DC471B2009EB50A /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				EA35B9BF1DC5C1D700625E17 /* mezamashare_good-morning.mp3 */,
+				EA35B9C01DC5C1D700625E17 /* mezamashare_okiro.mp3 */,
+				EA35B9C11DC5C1D700625E17 /* mezamashare_ppap4.mp3 */,
+				EA35B9C21DC5C1D700625E17 /* mezamashare_sukida.mp3 */,
+				EA35B9C31DC5C1D700625E17 /* mezamashare_zugyuuuun.mp3 */,
 				EA21558E1DC495020055643F /* bgm_01.mp3 */,
 			);
 			name = Audio;
@@ -422,10 +437,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA35B9C41DC5C1D700625E17 /* mezamashare_good-morning.mp3 in Resources */,
 				EA35B9AF1DC59EE800625E17 /* EnterRoomView.xib in Resources */,
+				EA35B9C71DC5C1D700625E17 /* mezamashare_sukida.mp3 in Resources */,
+				EA35B9C51DC5C1D700625E17 /* mezamashare_okiro.mp3 in Resources */,
 				EA35B9B51DC5AC5F00625E17 /* ClearView.xib in Resources */,
 				EA35B9BA1DC5AEA200625E17 /* StartUpView.xib in Resources */,
 				66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */,
+				EA35B9C81DC5C1D700625E17 /* mezamashare_zugyuuuun.mp3 in Resources */,
 				EA21558F1DC495020055643F /* bgm_01.mp3 in Resources */,
 				66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */,
 				EA35B9B81DC5AE2500625E17 /* Main.storyboard in Resources */,
@@ -434,6 +453,7 @@
 				EA35B9AD1DC59ECB00625E17 /* CreateRoomView.xib in Resources */,
 				EA35B9A91DC57ED700625E17 /* PeerListForDataViewController.storyboard in Resources */,
 				EA35B9B31DC59F6500625E17 /* WakeUpView.xib in Resources */,
+				EA35B9C61DC5C1D700625E17 /* mezamashare_ppap4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
