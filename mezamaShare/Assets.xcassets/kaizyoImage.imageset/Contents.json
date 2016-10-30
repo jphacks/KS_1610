@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "room_name.png",
+      "filename" : "kaijo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "room_name@2x.png.png",
+      "filename" : "kaijo@2x.png.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "room_name@3x.png.png",
+      "filename" : "kaijo@3x.png.png",
       "scale" : "3x"
     }
   ],
