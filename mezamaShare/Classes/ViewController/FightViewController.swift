@@ -17,8 +17,10 @@ class FightViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let view:UIView  = UINib(nibName: "StampButtonView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = menuView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         menuView.addSubview(view)
-        menuView.contentMode = .scaleAspectFit
     }
 
     override func didReceiveMemoryWarning() {
