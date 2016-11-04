@@ -39,12 +39,12 @@ class StampButtonView: UIView {
         bkImage5.layer.cornerRadius = 10
         bkImage6.layer.cornerRadius = 10
         
-        bkImage1.image = UIImage(named: "buttonImage1")
-        bkImage2.image = UIImage(named: "buttonImage2")
-        bkImage3.image = UIImage(named: "buttonImage3")
-        bkImage4.image = UIImage(named: "buttonImage4")
-        bkImage5.image = UIImage(named: "buttonImage5")
-        bkImage6.image = UIImage(named: "buttonImage6")
+//        bkImage1.image = UIImage(named: "buttonImage1")
+//        bkImage2.image = UIImage(named: "buttonImage2")
+//        bkImage3.image = UIImage(named: "buttonImage3")
+//        bkImage4.image = UIImage(named: "buttonImage4")
+//        bkImage5.image = UIImage(named: "buttonImage5")
+//        bkImage6.image = UIImage(named: "buttonImage6")
     }
     
     @IBAction func onTapButton1(_ sender: AnyObject) {
