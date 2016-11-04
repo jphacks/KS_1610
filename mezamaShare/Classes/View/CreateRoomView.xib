@@ -55,11 +55,11 @@
                         <constraint firstAttribute="width" secondItem="7F9-d4-CHt" secondAttribute="height" multiplier="36:5" id="w0j-tS-iky"/>
                     </constraints>
                 </imageView>
-                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-0m-T3P">
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-0m-T3P">
                     <rect key="frame" x="265" y="163" width="94" height="29"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <action selector="onHour:" destination="iN0-l3-epB" eventType="valueChanged" id="iax-ga-xb5"/>
+                        <action selector="onHour:" destination="iN0-l3-epB" eventType="valueChanged" id="dmy-3O-ZQe"/>
                     </connections>
                 </stepper>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-3j-bq6">
@@ -98,14 +98,14 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Dhk-eB-3Xk">
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="59" translatesAutoresizingMaskIntoConstraints="NO" id="Dhk-eB-3Xk">
                     <rect key="frame" x="265" y="200" width="94" height="29"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Dhk-eB-3Xk" secondAttribute="height" multiplier="94:29" id="pFU-sc-LmZ"/>
                     </constraints>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <action selector="omMinites:" destination="iN0-l3-epB" eventType="valueChanged" id="TuC-0J-KlK"/>
+                        <action selector="omMinites:" destination="iN0-l3-epB" eventType="valueChanged" id="3Mi-4e-b9G"/>
                     </connections>
                 </stepper>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElJ-i8-hM3">
