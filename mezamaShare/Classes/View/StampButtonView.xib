@@ -234,6 +234,12 @@
                 <outlet property="bkImage4" destination="V6L-Wp-d2D" id="wKi-kI-ozq"/>
                 <outlet property="bkImage5" destination="KSl-Ov-hUY" id="gMj-oa-msj"/>
                 <outlet property="bkImage6" destination="2Nm-4b-Ro4" id="wja-3v-gNF"/>
+                <outlet property="button1" destination="mjS-Pm-tXq" id="wnQ-Xh-EH8"/>
+                <outlet property="button2" destination="8GO-Qk-XZ9" id="FBo-iR-KQf"/>
+                <outlet property="button3" destination="JI2-aq-tzD" id="wZt-6e-3Dg"/>
+                <outlet property="button4" destination="xWU-bi-oVG" id="l9P-AG-CS0"/>
+                <outlet property="button5" destination="i1J-rQ-uZz" id="9sp-9T-IJ9"/>
+                <outlet property="button6" destination="FGr-fd-Le4" id="rMs-uf-USj"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="27.5"/>
         </view>
