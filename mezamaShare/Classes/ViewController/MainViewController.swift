@@ -17,20 +17,18 @@ class MainViewController: UIViewController {
     fileprivate var _listPeerIds: Array<String> = []
     
     private var myID: String = ""
-            var timer: Timer!
-            let audioPlay = AudioPlay()
-            let receptionAudioPlay = AudioPlay()
-            var myFight: Bool = false
+    var timer: Timer!
+    var endTimer: Timer!
+    let audioPlay = AudioPlay()
+    let receptionAudioPlay = AudioPlay()
+    var myFight: Bool = false
+    var youFight: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         webRTC()
         
-        let view:UIView  = UINib(nibName: "StartUpView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "StartUpView")
     }
     
     func webRTC() {
@@ -70,17 +68,16 @@ class MainViewController: UIViewController {
         // Partber message
         data.on(SKWDataConnectionEventEnum.DATACONNECTION_EVENT_DATA, callback: { (obj: NSObject?) -> Void in
             let strValue: String = obj as! String
-            if strValue == "end" {
-                if self.myFight {
-                    let view:UIView  = UINib(nibName: "ClearView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-                    view.frame = self.mainView.bounds
-                    view.translatesAutoresizingMaskIntoConstraints = true
-                    view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-                    self.mainView.addSubview(view)
-                    
-                    self.audioPlay.audioStop()
-                    self.send("end")
+            NSLog("\(strValue)")
+            
+            if strValue == "onFight" {
+                self.youFight = true
+                
+            }else if strValue == "end" {
+                DispatchQueue.main.async {
+                    self.end()
                 }
+                
             }else{
                 var audioPlayDelegate: AudioPlayDelegate? = nil
                 
@@ -187,35 +184,20 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
     func onHomeMakeRoom(sender: UIButton) {
-        NSLog("onHomeMakeRoom")
-        let view:UIView  = UINib(nibName: "CreateRoomView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "CreateRoomView")
     }
     
     func onHomeEnterRoom(sender: UIButton) {
-        NSLog("onHomeEnterRoom")
         if _bEstablished {
-            let view:UIView  = UINib(nibName: "EnterRoomView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-            view.frame = mainView.bounds
-            view.translatesAutoresizingMaskIntoConstraints = true
-            view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-            mainView.addSubview(view)
+            pagingView(selfNib: "", nibName: "EnterRoomView")
         }else{
             alertView(title: "接続未完了", message: "接続を完了させてください", buttonName: "OK")
         }
     }
     
     func onMakrRoom(sender: UIButton) {
-        NSLog("onMakrRoom")
         if _bEstablished {
-            let view:UIView  = UINib(nibName: "WaitTimeView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-            view.frame = mainView.bounds
-            view.translatesAutoresizingMaskIntoConstraints = true
-            view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-            mainView.addSubview(view)
+            pagingView(selfNib: "", nibName: "WaitTimeView")
             timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
         }else{
             alertView(title: "接続未完了", message: "メンバーが接続するまでお待ち下さい", buttonName: "OK")
@@ -223,30 +205,27 @@ extension MainViewController {
     }
     
     func onEnterRoom(sender: UIButton) {
-        NSLog("onEnterRoom")
-        let view:UIView  = UINib(nibName: "WaitTimeView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "WaitTimeView")
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
     }
     
     func onFight(sender: UIButton) {
-        send("end")
         myFight = true
+        send("onFight")
         
-        NSLog("onFight")
-        let view:UIView  = UINib(nibName: "StampButtonView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
-        
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "bgm_01")
-        audioPlayDelegate?.audioPlay(needsLoop: true)
+        if youFight {
+            pagingView(selfNib: "", nibName: "ClearView")
+            
+            self.audioPlay.audioStop()
+            self.send("end")
+        } else {
+            pagingView(selfNib: "", nibName: "StampButtonView")
+            
+            var audioPlayDelegate: AudioPlayDelegate? = nil
+            audioPlayDelegate = audioPlay
+            audioPlayDelegate?.setAudio(audioName: "bgm_01")
+            audioPlayDelegate?.audioPlay(needsLoop: true)
+        }
     }
     
     func onInputID(sender: UIButton) {
@@ -264,17 +243,19 @@ extension MainViewController {
     }
     
     func update(tm: Timer) {
-        NSLog("update")
-        let view:UIView  = UINib(nibName: "WakeUpView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "WakeUpView")
         
         var audioPlayDelegate: AudioPlayDelegate? = nil
         audioPlayDelegate = audioPlay
         audioPlayDelegate?.setAudio(audioName: "bgm_01")
         audioPlayDelegate?.audioPlay(needsLoop: true)
+    }
+    
+    func end(){
+        if self.myFight {
+            pagingView(selfNib: "", nibName: "ClearView")
+            audioPlay.audioStop()
+        }
     }
 }
 
@@ -301,5 +282,25 @@ extension MainViewController{
     
     func onTapButton6(sender: UIButton) {
 //        send("")
+    }
+}
+
+extension MainViewController {
+    func pagingView(selfNib: String, nibName: String) {
+        NSLog("Paging by \(nibName)")
+        let view:UIView  = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        removeAllSubviews(parentView: mainView)
+        mainView.addSubview(view)
+    }
+    
+    
+    func removeAllSubviews(parentView: UIView){
+        let subviews = parentView.subviews
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
     }
 }
