@@ -26,7 +26,9 @@ class StampButtonView: UIView {
     @IBOutlet weak var button6: UIButton!
     
     
-    let audioPlay = AudioPlay()
+//    let audioPlay = AudioPlay()
+    let audioPlay: [AudioPlay] = [AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay()]
+    var audioPlayerCount: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,49 +50,5 @@ class StampButtonView: UIView {
         button4.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton4(sender:)), for: .touchUpInside)
         button5.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton5(sender:)), for: .touchUpInside)
         button6.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton6(sender:)), for: .touchUpInside)
-    }
-    
-    @IBAction func onTapButton1(_ sender: AnyObject) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_zugyuuuun")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
-    }
-    
-    @IBAction func onTapButton2(_ sender: AnyObject) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_ppap4")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
-    }
-    
-    @IBAction func onTapButton3(_ sender: Any) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_okiro")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
-    }
-    
-    @IBAction func onTapButton4(_ sender: Any) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_sukida")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
-    }
-    
-    @IBAction func onTapButton5(_ sender: AnyObject) {
-        
-    }
-    
-    @IBAction func onTapButton6(_ sender: AnyObject) {
-//        var audioPlayDelegate: AudioPlayDelegate? = nil
-//        
-//        audioPlayDelegate = audioPlay
-//        audioPlayDelegate?.setAudio(audioName: "bgm_01")
-//        audioPlayDelegate?.audioPlay(needsLoop: true)
     }
 }

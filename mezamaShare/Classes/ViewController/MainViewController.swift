@@ -5,7 +5,7 @@
 //  Created by Akio Itaya on 2016/10/29.
 //  Copyright © 2016年 AkkeyLab. All rights reserved.
 //
-
+import UIKit
 
 class MainViewController: UIViewController {
 
@@ -20,7 +20,8 @@ class MainViewController: UIViewController {
     var timer: Timer!
     var endTimer: Timer!
     let audioPlay = AudioPlay()
-    let receptionAudioPlay = AudioPlay()
+    let stampAudioPlay: [AudioPlay] = [AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay()]
+    var stampAaudioPlayerCount: Int = 0
     var myFight: Bool = false
     var youFight: Bool = false
     
@@ -74,16 +75,10 @@ class MainViewController: UIViewController {
                 self.youFight = true
                 
             }else if strValue == "end" {
-                DispatchQueue.main.async {
-                    self.end()
-                }
+                DispatchQueue.main.async { self.end() }
                 
             }else{
-                var audioPlayDelegate: AudioPlayDelegate? = nil
-                
-                audioPlayDelegate = self.receptionAudioPlay
-                audioPlayDelegate?.setAudio(audioName: strValue)
-                audioPlayDelegate?.audioPlay(needsLoop: false)
+                self.stampAudio(name: strValue)
             }
         })
         
@@ -257,23 +252,38 @@ extension MainViewController {
             audioPlay.audioStop()
         }
     }
+    
+    func stampAudio(name: String){
+        let audioPlayDelegate: AudioPlayDelegate? = stampAudioPlay[stampAaudioPlayerCount]
+        if stampAudioPlay.count == (stampAaudioPlayerCount + 1) {
+            stampAaudioPlayerCount = 0
+        }else{
+            stampAaudioPlayerCount += 1
+        }
+        audioPlayDelegate?.setAudio(audioName: name)
+        audioPlayDelegate?.audioPlay(needsLoop: false)
+    }
 }
 
 extension MainViewController{
     func onTapButton1(sender: UIButton) {
         send("mezamashare_zugyuuuun")
+        stampAudio(name: "mezamashare_zugyuuuun")
     }
     
     func onTapButton2(sender: UIButton) {
         send("mezamashare_ppap4")
+        stampAudio(name: "mezamashare_ppap4")
     }
     
     func onTapButton3(sender: UIButton) {
         send("mezamashare_okiro")
+        stampAudio(name: "mezamashare_okiro")
     }
     
     func onTapButton4(sender: UIButton) {
         send("mezamashare_sukida")
+        stampAudio(name: "mezamashare_sukida")
     }
     
     func onTapButton5(sender: UIButton) {
