@@ -28,8 +28,6 @@
 		EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155881DC47F270055643F /* StampButtonView.swift */; };
 		EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2155891DC47F270055643F /* StampButtonView.xib */; };
 		EA21558F1DC495020055643F /* bgm_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA21558E1DC495020055643F /* bgm_01.mp3 */; };
-		EA35B9A91DC57ED700625E17 /* PeerListForDataViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */; };
-		EA35B9AB1DC57EE400625E17 /* PeerListForDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */; };
 		EA35B9AD1DC59ECB00625E17 /* CreateRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9AC1DC59ECB00625E17 /* CreateRoomView.xib */; };
 		EA35B9AF1DC59EE800625E17 /* EnterRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9AE1DC59EE800625E17 /* EnterRoomView.xib */; };
 		EA35B9B11DC59F3700625E17 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9B01DC59F3700625E17 /* WaitTimeView.xib */; };
@@ -96,8 +94,6 @@
 		EA2155891DC47F270055643F /* StampButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StampButtonView.xib; path = Classes/View/StampButtonView.xib; sourceTree = "<group>"; };
 		EA21558E1DC495020055643F /* bgm_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm_01.mp3; path = Resources/Audio/bgm_01.mp3; sourceTree = "<group>"; };
 		EA2155901DC509FF0055643F /* mezamaShare_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mezamaShare_Bridging_Header.h; sourceTree = "<group>"; };
-		EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PeerListForDataViewController.storyboard; path = Classes/Layout/PeerListForDataViewController.storyboard; sourceTree = "<group>"; };
-		EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeerListForDataViewController.swift; path = Classes/ViewController/PeerListForDataViewController.swift; sourceTree = "<group>"; };
 		EA35B9AC1DC59ECB00625E17 /* CreateRoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateRoomView.xib; path = Classes/View/CreateRoomView.xib; sourceTree = "<group>"; };
 		EA35B9AE1DC59EE800625E17 /* EnterRoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EnterRoomView.xib; path = Classes/View/EnterRoomView.xib; sourceTree = "<group>"; };
 		EA35B9B01DC59F3700625E17 /* WaitTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WaitTimeView.xib; path = Classes/View/WaitTimeView.xib; sourceTree = "<group>"; };
@@ -257,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				EA35B9B61DC5AE2500625E17 /* Main.storyboard */,
-				EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */,
 				66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */,
 			);
 			name = Layout;
@@ -309,7 +304,6 @@
 		EA2155771DC437EA0055643F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */,
 				0D985D791DC49A0A009EB50A /* Id.swift */,
 				0D985D701DC46395009EB50A /* AudioPlay.swift */,
 				EA2155781DC45EA80055643F /* ViewController.swift */,
@@ -451,7 +445,6 @@
 				EA35B9B11DC59F3700625E17 /* WaitTimeView.xib in Resources */,
 				EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */,
 				EA35B9AD1DC59ECB00625E17 /* CreateRoomView.xib in Resources */,
-				EA35B9A91DC57ED700625E17 /* PeerListForDataViewController.storyboard in Resources */,
 				EA35B9B31DC59F6500625E17 /* WakeUpView.xib in Resources */,
 				EA35B9C61DC5C1D700625E17 /* mezamashare_ppap4.mp3 in Resources */,
 			);
@@ -554,7 +547,6 @@
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,
 				EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */,
 				0D985D7A1DC49A0A009EB50A /* Id.swift in Sources */,
-				EA35B9AB1DC57EE400625E17 /* PeerListForDataViewController.swift in Sources */,
 				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
