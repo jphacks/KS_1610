@@ -12,12 +12,17 @@ class CreateRoomView: UIView {
     
     @IBOutlet weak var makeButton: UIButton!
     @IBOutlet weak var inputID: UIButton!
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var timePicker: UIDatePicker!
     private var setTime: String = "00:00"
     private let userDefault = UserDefaults.standard
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        if userDefault.object(forKey: "myID") != nil {
+            idLabel.text = userDefault.object(forKey: "myID") as? String
+        }
         
         makeButton.addTarget(MainViewController(), action: #selector(MainViewController.onMakrRoom(sender:)), for: .touchUpInside)
         inputID.addTarget(MainViewController(), action: #selector(MainViewController.onInputID(sender:)), for: .touchUpInside)

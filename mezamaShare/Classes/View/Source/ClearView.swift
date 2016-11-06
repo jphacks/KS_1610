@@ -11,10 +11,15 @@ import UIKit
 class ClearView: UIView {
 
     @IBOutlet weak var returnButton: UIButton!
+    @IBOutlet weak var pointLabel: UILabel!
+    private let userDefault = UserDefaults.standard
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         returnButton.addTarget(MainViewController(), action: #selector(MainViewController.onReturn(sender:)), for: .touchUpInside)
+        if userDefault.object(forKey: "tapCount") != nil {
+            pointLabel.text = String( describing: userDefault.integer(forKey: "tapCount"))
+        }
     }
 }

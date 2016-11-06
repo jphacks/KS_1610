@@ -25,6 +25,9 @@ class StampButtonView: UIView {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
+    private let userDefault = UserDefaults.standard
+    private var tapCount: Int = 0
     
     
 //    let audioPlay = AudioPlay()
@@ -34,6 +37,7 @@ class StampButtonView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        countLabel.text = "100"
         buttonSetup()
     }
     
@@ -55,20 +59,37 @@ class StampButtonView: UIView {
     
     @IBAction func onButton1(_ sender: UIButton) {
         bkImage1.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+        count()
     }
     @IBAction func onButton2(_ sender: UIButton) {
         bkImage2.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+        count()
     }
     @IBAction func onButton3(_ sender: UIButton) {
         bkImage3.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+        count()
     }
     @IBAction func onButton4(_ sender: UIButton) {
         bkImage4.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+        count()
     }
     @IBAction func onButton5(_ sender: UIButton) {
         bkImage5.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+        count()
     }
     @IBAction func onButton6(_ sender: UIButton) {
         bkImage6.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+        
+    }
+    
+    func count() {
+        tapCount += 1
+        if tapCount > 100 {
+            countLabel.text = "0"
+        } else {
+            countLabel.text = String(100 - tapCount)
+        }
+        userDefault.set(tapCount, forKey: "tapCount")
+        self.userDefault.synchronize()
     }
 }
