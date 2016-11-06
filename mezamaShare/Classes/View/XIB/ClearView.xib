@@ -40,15 +40,28 @@
                         <constraint firstAttribute="width" secondItem="7ly-oh-ACL" secondAttribute="height" multiplier="343:100" id="gUR-2Q-UnD"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG2-yz-vZg">
+                    <rect key="frame" x="16" y="485" width="222" height="55"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="222" id="2l3-1y-SGX"/>
+                        <constraint firstAttribute="width" secondItem="QG2-yz-vZg" secondAttribute="height" multiplier="222:55" id="yha-0t-M0d"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.12549019610000001" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Idc-Ir-z73" firstAttribute="top" secondItem="7ly-oh-ACL" secondAttribute="bottom" constant="8" id="6k8-bQ-BRi"/>
                 <constraint firstAttribute="bottom" secondItem="PRC-Wu-8kk" secondAttribute="bottom" constant="20" id="7fN-fQ-wNB"/>
                 <constraint firstItem="7ly-oh-ACL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="8LT-K5-Y0q"/>
+                <constraint firstItem="PRC-Wu-8kk" firstAttribute="top" secondItem="QG2-yz-vZg" secondAttribute="bottom" constant="8" id="Adr-jT-JLE"/>
                 <constraint firstItem="XqU-ho-c1g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="BJT-kV-7Cs"/>
                 <constraint firstItem="PRC-Wu-8kk" firstAttribute="top" secondItem="7ly-oh-ACL" secondAttribute="bottom" constant="8" id="F0S-do-7FD"/>
                 <constraint firstItem="XqU-ho-c1g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="KOc-ls-kXd"/>
+                <constraint firstItem="QG2-yz-vZg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="PBz-dg-MKI"/>
                 <constraint firstAttribute="bottom" secondItem="Idc-Ir-z73" secondAttribute="bottom" constant="20" id="WGE-kh-0FG"/>
                 <constraint firstAttribute="trailing" secondItem="PRC-Wu-8kk" secondAttribute="trailing" constant="16" id="fKa-Oj-1IL"/>
                 <constraint firstAttribute="trailing" secondItem="Idc-Ir-z73" secondAttribute="trailing" constant="16" id="jxM-WS-he6"/>
@@ -58,6 +71,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="pointLabel" destination="QG2-yz-vZg" id="wgJ-u2-4Ck"/>
                 <outlet property="returnButton" destination="PRC-Wu-8kk" id="OmA-kb-bc5"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>

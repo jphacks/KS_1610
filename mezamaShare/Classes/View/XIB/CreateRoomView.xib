@@ -105,6 +105,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="idLabel" destination="fRU-96-rIT" id="Ggj-uF-9Yu"/>
                 <outlet property="inputID" destination="ElJ-i8-hM3" id="pcn-E1-Stw"/>
                 <outlet property="makeButton" destination="kLP-1Z-6ce" id="zlC-zR-5wZ"/>
                 <outlet property="timePicker" destination="at9-bj-QqP" id="nz6-fi-EOO"/>

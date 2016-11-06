@@ -220,13 +220,13 @@
 		66DB77781DCF6E9200D4F094 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				66DB777A1DCF711500D4F094 /* ClearView.xib */,
+				66DB777E1DCF711500D4F094 /* StartUpView.xib */,
 				66DB777B1DCF711500D4F094 /* CreateRoomView.xib */,
 				66DB777C1DCF711500D4F094 /* EnterRoomView.xib */,
-				66DB777D1DCF711500D4F094 /* StampButtonView.xib */,
-				66DB777E1DCF711500D4F094 /* StartUpView.xib */,
 				66DB777F1DCF711500D4F094 /* WaitTimeView.xib */,
+				66DB777D1DCF711500D4F094 /* StampButtonView.xib */,
 				66DB77801DCF711500D4F094 /* WakeUpView.xib */,
+				66DB777A1DCF711500D4F094 /* ClearView.xib */,
 			);
 			name = XIB;
 			sourceTree = "<group>";
@@ -234,13 +234,13 @@
 		66DB77791DCF6EA800D4F094 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				66DB77881DCF715B00D4F094 /* ClearView.swift */,
+				66DB778C1DCF715B00D4F094 /* StartUpView.swift */,
 				66DB77891DCF715B00D4F094 /* CreateRoomView.swift */,
 				66DB778A1DCF715B00D4F094 /* EnterRoomView.swift */,
-				66DB778B1DCF715B00D4F094 /* StampButtonView.swift */,
-				66DB778C1DCF715B00D4F094 /* StartUpView.swift */,
 				66DB778D1DCF715B00D4F094 /* WaitTimeView.swift */,
+				66DB778B1DCF715B00D4F094 /* StampButtonView.swift */,
 				66DB778E1DCF715B00D4F094 /* WakeUpView.swift */,
+				66DB77881DCF715B00D4F094 /* ClearView.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";

@@ -79,6 +79,10 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="myID" destination="Aq2-36-9Ek" id="muh-rm-173"/>
+                <outlet property="roomNameLabel" destination="dOc-Wm-475" id="U0a-Wr-Gdl"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
