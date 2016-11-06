@@ -34,7 +34,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         webRTC()
-        
         pagingView(selfNib: "", nibName: "StartUpView")
     }
     
@@ -47,6 +46,34 @@ class MainViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func stampAudio(name: String){
+        let audioPlayDelegate: AudioPlayDelegate? = stampAudioPlay[stampAaudioPlayerCount]
+        if stampAudioPlay.count == (stampAaudioPlayerCount + 1) {
+            stampAaudioPlayerCount = 0
+        }else{
+            stampAaudioPlayerCount += 1
+        }
+        audioPlayDelegate?.setAudio(audioName: name)
+        audioPlayDelegate?.audioPlay(needsLoop: false)
+    }
+    
+    func pagingView(selfNib: String, nibName: String) {
+        nowPage = nibName
+        let view:UIView  = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        removeAllSubviews(parentView: mainView)
+        mainView.addSubview(view)
+    }
+    
+    func removeAllSubviews(parentView: UIView){
+        let subviews = parentView.subviews
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,8 +81,6 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController {
-    
-    
     func update(tm: Timer) {
         format.dateFormat = "HH:mm"
         let nowTime: String = format.string(from: NSDate() as Date)
@@ -76,37 +101,6 @@ extension MainViewController {
         if self.myFight {
             pagingView(selfNib: "", nibName: "ClearView")
             audioPlay.audioStop()
-        }
-    }
-    
-    func stampAudio(name: String){
-        let audioPlayDelegate: AudioPlayDelegate? = stampAudioPlay[stampAaudioPlayerCount]
-        if stampAudioPlay.count == (stampAaudioPlayerCount + 1) {
-            stampAaudioPlayerCount = 0
-        }else{
-            stampAaudioPlayerCount += 1
-        }
-        audioPlayDelegate?.setAudio(audioName: name)
-        audioPlayDelegate?.audioPlay(needsLoop: false)
-    }
-}
-
-extension MainViewController {
-    func pagingView(selfNib: String, nibName: String) {
-        nowPage = nibName
-        let view:UIView  = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        removeAllSubviews(parentView: mainView)
-        mainView.addSubview(view)
-    }
-    
-    
-    func removeAllSubviews(parentView: UIView){
-        let subviews = parentView.subviews
-        for subview in subviews {
-            subview.removeFromSuperview()
         }
     }
 }
