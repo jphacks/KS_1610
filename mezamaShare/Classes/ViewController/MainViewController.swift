@@ -25,6 +25,12 @@ class MainViewController: UIViewController {
     var stampAaudioPlayerCount: Int = 0
     var myFight: Bool = false
     var youFight: Bool = false
+    var nowPage: String = "Home"
+    
+    let userDefault = UserDefaults.standard
+    let format = DateFormatter()
+    var setTime: String = ""
+    var canTimer: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +76,7 @@ class MainViewController: UIViewController {
         // Partber message
         data.on(SKWDataConnectionEventEnum.DATACONNECTION_EVENT_DATA, callback: { (obj: NSObject?) -> Void in
             let strValue: String = obj as! String
-            NSLog("\(strValue)")
+            print("page:\(self.nowPage) out:\(strValue)")
             
             if strValue == "onFight" {
                 self.youFight = true
@@ -79,7 +85,11 @@ class MainViewController: UIViewController {
                 DispatchQueue.main.async { self.end() }
                 
             }else{
-                self.stampAudio(name: strValue)
+                if self.nowPage == "WakeUpView" {
+                    self.stampAudio(name: strValue)
+                }else{
+                    self.setTime = strValue
+                }
             }
         })
         
@@ -191,19 +201,20 @@ extension MainViewController {
     
     func onMakrRoom(sender: UIButton) {
         if _bEstablished {
-            pagingView(selfNib: "", nibName: "WaitTimeView")
-            timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
+            if userDefault.object(forKey: "setTime") != nil {
+                setTime = userDefault.object(forKey: "setTime") as! String
+                send(setTime)
+                pagingView(selfNib: "", nibName: "WaitTimeView")
+                timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+            } else {
+                alertView(title: "エラー", message: "起床時間のロードに失敗しました", buttonName: "OK")
+            }
         }else{
             alertView(title: "接続未完了", message: "メンバーが接続するまでお待ち下さい", buttonName: "OK")
         }
     }
     
     func onEnterRoom(sender: UIButton) {
-        pagingView(selfNib: "", nibName: "WaitTimeView")
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
-    }
-    
-    func onEnterBuddyRoom(sender: UIButton) {
         let realm = try! Realm()
         var outString: String = ""
         
@@ -212,8 +223,12 @@ extension MainViewController {
         }
         connect(outString)
         
-        pagingView(selfNib: "", nibName: "WaitTimeView")
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
+        if setTime != "" { // 再度やるときは初期化必要
+            pagingView(selfNib: "", nibName: "WaitTimeView")
+            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        } else {
+            alertView(title: "起床時未設定", message: "メンバーが設定するまでお待ち下さい", buttonName: "OK")
+        }
     }
     
     func onFight(sender: UIButton) {
@@ -250,12 +265,19 @@ extension MainViewController {
     }
     
     func update(tm: Timer) {
-        pagingView(selfNib: "", nibName: "WakeUpView")
+        format.dateFormat = "HH:mm"
+        let nowTime: String = format.string(from: NSDate() as Date)
         
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "bgm_01")
-        audioPlayDelegate?.audioPlay(needsLoop: true)
+        if (nowTime == setTime) && canTimer {
+            canTimer = false // 再度するときはリセット必要
+            
+            pagingView(selfNib: "", nibName: "WakeUpView")
+            
+            var audioPlayDelegate: AudioPlayDelegate? = nil
+            audioPlayDelegate = audioPlay
+            audioPlayDelegate?.setAudio(audioName: "bgm_01")
+            audioPlayDelegate?.audioPlay(needsLoop: true)
+        }
     }
     
     func end(){
@@ -309,7 +331,7 @@ extension MainViewController{
 
 extension MainViewController {
     func pagingView(selfNib: String, nibName: String) {
-        NSLog("Paging by \(nibName)")
+        nowPage = nibName
         let view:UIView  = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = mainView.bounds
         view.translatesAutoresizingMaskIntoConstraints = true

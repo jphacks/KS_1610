@@ -10,26 +10,27 @@ import UIKit
 
 class CreateRoomViewController: UIView {
     
-    @IBOutlet weak var hour: UILabel!
-    @IBOutlet weak var minites: UILabel!
     @IBOutlet weak var makeButton: UIButton!
     @IBOutlet weak var inputID: UIButton!
-
+    @IBOutlet weak var timePicker: UIDatePicker!
+    private var setTime: String = "00:00"
+    private let userDefault = UserDefaults.standard
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         makeButton.addTarget(MainViewController(), action: #selector(MainViewController.onMakrRoom(sender:)), for: .touchUpInside)
         inputID.addTarget(MainViewController(), action: #selector(MainViewController.onInputID(sender:)), for: .touchUpInside)
+        timePicker.setValue(UIColor.white, forKey: "textColor")
+        timePicker.setValue(false, forKey: "highlightsToday")
     }
     
-    
-    
-    @IBAction func onHour(_ sender: UIStepper) {
-        hour.text = String(Int(sender.value))
-    }
-    
-    
-    @IBAction func omMinites(_ sender: UIStepper) {
-        minites.text = String(Int(sender.value))
+    @IBAction func onTimePicker(_ sender: UIDatePicker) {
+        let format = DateFormatter()
+        format.dateFormat = "HH:mm"
+        setTime = format.string(from: sender.date)
+        
+        userDefault.set(setTime, forKey: "setTime")
+        userDefault.synchronize()
     }
 }

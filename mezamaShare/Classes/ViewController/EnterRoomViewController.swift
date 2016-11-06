@@ -29,7 +29,7 @@ class EnterRoomViewController: UIView, UITableViewDelegate, UITableViewDataSourc
         }
         // -----
         
-        enterButton.addTarget(MainViewController(), action: #selector(MainViewController.onEnterBuddyRoom(sender:)), for: .touchUpInside)
+        enterButton.addTarget(MainViewController(), action: #selector(MainViewController.onEnterRoom(sender:)), for: .touchUpInside)
         
         tableView.allowsSelection = true
         tableView.allowsMultipleSelection = false
