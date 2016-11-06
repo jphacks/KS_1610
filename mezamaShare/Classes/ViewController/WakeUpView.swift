@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WakeUpViewController: UIView {
+class WakeUpView: UIView {
     @IBOutlet weak var fightButton: UIButton!
 
     override func awakeFromNib() {

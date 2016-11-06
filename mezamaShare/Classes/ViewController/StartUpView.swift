@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartUpViewController: UIView {
+class StartUpView: UIView {
 
     @IBOutlet weak var homeMakeRoom: UIButton!
     @IBOutlet weak var homeEnterRoom: UIButton!

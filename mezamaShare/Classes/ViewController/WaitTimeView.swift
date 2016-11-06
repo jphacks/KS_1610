@@ -8,6 +8,6 @@
 
 import UIKit
 
-class WaitTimeViewController: UIView {
+class WaitTimeView: UIView {
 
 }

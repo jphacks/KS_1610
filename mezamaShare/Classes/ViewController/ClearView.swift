@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClearViewController: UIView {
+class ClearView: UIView {
 
     @IBOutlet weak var returnButton: UIButton!
     

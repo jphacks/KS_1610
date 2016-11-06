@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class EnterRoomViewController: UIView, UITableViewDelegate, UITableViewDataSource {
+class EnterRoomView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     

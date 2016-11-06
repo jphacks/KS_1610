@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateRoomViewController: UIView {
+class CreateRoomView: UIView {
     
     @IBOutlet weak var makeButton: UIButton!
     @IBOutlet weak var inputID: UIButton!
