@@ -85,6 +85,11 @@ extension MainViewController {
             
             self.audioPlay.audioStop()
             self.send("end")
+            
+            var audioPlayDelegate: AudioPlayDelegate? = nil
+            audioPlayDelegate = audioPlay
+            audioPlayDelegate?.setAudio(audioName: "mezamashare_good-morning")
+            audioPlayDelegate?.audioPlay(needsLoop: false)
         } else {
             pagingView(selfNib: "", nibName: "StampButtonView")
             
