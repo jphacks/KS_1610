@@ -18,6 +18,9 @@
 		66B2D9951DAF357A004BBEED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9941DAF357A004BBEED /* Realm.framework */; };
 		66B2D9971DAF3597004BBEED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9961DAF3597004BBEED /* RealmSwift.framework */; };
 		66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */; };
+		66DB77691DCF5E0100D4F094 /* SkyWayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DB77681DCF5E0100D4F094 /* SkyWayController.swift */; };
+		66DB776B1DCF665300D4F094 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DB776A1DCF665300D4F094 /* RealmController.swift */; };
+		66DB776D1DCF66BD00D4F094 /* ButtonActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DB776C1DCF66BD00D4F094 /* ButtonActionController.swift */; };
 		EA2155791DC45EA80055643F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155781DC45EA80055643F /* ViewController.swift */; };
 		EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557A1DC45F0C0055643F /* AppDelegate.swift */; };
 		EA21557D1DC465AD0055643F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557C1DC465AD0055643F /* MainViewController.swift */; };
@@ -81,6 +84,9 @@
 		66B2D9941DAF357A004BBEED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		66B2D9961DAF3597004BBEED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		66DB77681DCF5E0100D4F094 /* SkyWayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkyWayController.swift; path = Classes/ViewController/SkyWayController.swift; sourceTree = "<group>"; };
+		66DB776A1DCF665300D4F094 /* RealmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmController.swift; path = Classes/ViewController/RealmController.swift; sourceTree = "<group>"; };
+		66DB776C1DCF66BD00D4F094 /* ButtonActionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonActionController.swift; path = Classes/ViewController/ButtonActionController.swift; sourceTree = "<group>"; };
 		75AFDA52917E66BA14A5B489 /* Pods_mezamaShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7124FA7F1C90E7F6F5775A /* Pods_mezamaShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA0801441509D84D3CE072 /* Pods-mezamaShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.release.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +316,7 @@
 		EA2155771DC437EA0055643F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				66DB77681DCF5E0100D4F094 /* SkyWayController.swift */,
 				0D985D791DC49A0A009EB50A /* Id.swift */,
 				0D985D701DC46395009EB50A /* AudioPlay.swift */,
 				EA2155781DC45EA80055643F /* ViewController.swift */,
@@ -321,6 +328,8 @@
 				EA2155861DC467E20055643F /* EnterRoomViewController.swift */,
 				EA35B9BB1DC5B13500625E17 /* StartUpViewController.swift */,
 				EA35B9BD1DC5B2E500625E17 /* ClearViewController.swift */,
+				66DB776A1DCF665300D4F094 /* RealmController.swift */,
+				66DB776C1DCF66BD00D4F094 /* ButtonActionController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -545,10 +554,13 @@
 				EA2155811DC4664B0055643F /* WaitTimeViewController.swift in Sources */,
 				EA2155831DC467170055643F /* WakeUpViewController.swift in Sources */,
 				EA35B9BC1DC5B13500625E17 /* StartUpViewController.swift in Sources */,
+				66DB776B1DCF665300D4F094 /* RealmController.swift in Sources */,
 				EA2155871DC467E20055643F /* EnterRoomViewController.swift in Sources */,
+				66DB776D1DCF66BD00D4F094 /* ButtonActionController.swift in Sources */,
 				EA2155851DC467A00055643F /* FightViewController.swift in Sources */,
 				EA21557D1DC465AD0055643F /* MainViewController.swift in Sources */,
 				EA35B9BE1DC5B2E500625E17 /* ClearViewController.swift in Sources */,
+				66DB77691DCF5E0100D4F094 /* SkyWayController.swift in Sources */,
 				EA21557F1DC465E20055643F /* CreateRoomViewController.swift in Sources */,
 				EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */,
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,

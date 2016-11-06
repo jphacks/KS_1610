@@ -6,18 +6,17 @@
 //  Copyright © 2016年 AkkeyLab. All rights reserved.
 //
 import UIKit
-import RealmSwift
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var mainView: UIView!
-    fileprivate var _peer: SKWPeer?
-    fileprivate var _data: SKWDataConnection?
-    fileprivate var _id: String? = nil
-    fileprivate var _bEstablished: Bool = false
-    fileprivate var _listPeerIds: Array<String> = []
+    var _peer: SKWPeer?
+    var _data: SKWDataConnection?
+    var _id: String? = nil
+    var _bEstablished: Bool = false
+    var _listPeerIds: Array<String> = []
     
-    private var myID: String = ""
+    var myID: String = ""
     var timer: Timer!
     var endTimer: Timer!
     let audioPlay = AudioPlay()
@@ -39,138 +38,6 @@ class MainViewController: UIViewController {
         pagingView(selfNib: "", nibName: "StartUpView")
     }
     
-    func webRTC() {
-        let option: SKWPeerOption = SKWPeerOption.init()
-        option.key = "ae7068ea-8871-45c3-b157-23be59c73d5f"
-        option.domain = "akkeylab"
-        _peer = SKWPeer.init(options: option)
-        
-        _peer?.on(SKWPeerEventEnum.PEER_EVENT_ERROR, callback: { (obj: NSObject?) -> Void in
-            let error: SKWPeerError = obj as! SKWPeerError
-            self.alertView(title: "Error", message: String(describing: error), buttonName: "OK")
-        })
-        
-        _peer?.on(SKWPeerEventEnum.PEER_EVENT_OPEN, callback: { (obj: NSObject?) -> Void in
-            self._id = obj as? String
-            DispatchQueue.main.async(execute: {
-                self.myID = self._id!
-                self.alertView(title: "Get my ID", message: self.myID, buttonName: "OK")
-            })
-        })
-        
-        _peer?.on(SKWPeerEventEnum.PEER_EVENT_CONNECTION, callback: { (obj: NSObject?) -> Void in
-            self._data = obj as? SKWDataConnection
-            self.setDataCallbacks(self._data!)
-            self._bEstablished = true
-        })
-    }
-    
-    func setDataCallbacks(_ data: SKWDataConnection) {
-        
-        // DataConnection opened
-        data.on(SKWDataConnectionEventEnum.DATACONNECTION_EVENT_OPEN, callback: { (obj: NSObject?) -> Void in
-            self._bEstablished = true
-            self.alertView(title: "P2P接続", message: "接続に成功しました", buttonName: "OK")
-        })
-        
-        // Partber message
-        data.on(SKWDataConnectionEventEnum.DATACONNECTION_EVENT_DATA, callback: { (obj: NSObject?) -> Void in
-            let strValue: String = obj as! String
-            print("page:\(self.nowPage) out:\(strValue)")
-            
-            if strValue == "onFight" {
-                self.youFight = true
-                
-            }else if strValue == "end" {
-                DispatchQueue.main.async { self.end() }
-                
-            }else{
-                if self.nowPage == "WakeUpView" {
-                    self.stampAudio(name: strValue)
-                }else{
-                    self.setTime = strValue
-                }
-            }
-        })
-        
-        // DataConnection closed
-        data.on(SKWDataConnectionEventEnum.DATACONNECTION_EVENT_CLOSE, callback: { (obj: NSObject?) -> Void in
-            self._data = nil
-            self._bEstablished = false
-            self.alertView(title: "P2P切断", message: "接続が終了しました", buttonName: "OK")
-        })
-    }
-    
-    func getPeerList() {
-        if (_peer == nil) || (_id == nil) || (_id?.characters.count == 0) {
-            return
-        }
-        
-        _peer?.listAllPeers({ (peers: [Any]?) -> Void in
-            self._listPeerIds = []
-            let peersArray: [String] = peers as! [String]
-            for strValue: String in peersArray {
-                print(strValue)
-                
-                if strValue == self._id {
-                    continue
-                }
-                self._listPeerIds.append(strValue)
-            }
-            if self._listPeerIds.count > 0 {
-                let youID = Id()
-                let realm = try! Realm()
-                
-                try! realm.write({
-                    realm.deleteAll()
-                })
-                
-                for data in self._listPeerIds {
-                    youID.id = data
-                    
-                    try! realm.write {
-                        realm.add(youID)
-                    }
-                }
-                DispatchQueue.main.async {
-                    self.pagingView(selfNib: "", nibName: "EnterRoomView")
-                }
-            } else {
-                self.alertView(title: "未検出", message: "ペアリング相手が見つかりません", buttonName: "OK")
-            }
-        })
-    }
-    
-    func connect(_ strDestId: String) {
-        let options = SKWConnectOption()
-        options.label = "chat"
-        options.metadata = "{'message': 'hi'}"
-        options.serialization = SKWSerializationEnum.SERIALIZATION_BINARY
-        options.reliable = true
-        
-        _data = _peer?.connect(withId: strDestId, options: options)
-        setDataCallbacks(self._data!)
-    }
-    
-    func close() {
-        if _bEstablished == false {
-            return
-        }
-        _bEstablished = false
-        
-        if _data != nil {
-            _data?.close()
-        }
-    }
-    
-    func send(_ data: String) {
-        let bResult: Bool = (_data?.send(data as NSObject!))!
-        
-        if bResult == true {
-//            alertView(title: "送信成功", message: "文字列の送信に成功しました", buttonName: "OK")
-        }
-    }
-    
     func alertView(title: String, message: String, buttonName: String){
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let buttonAction = UIAlertAction(title: buttonName, style: .default) { action in
@@ -187,82 +54,7 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController {
-    func onHomeMakeRoom(sender: UIButton) {
-        pagingView(selfNib: "", nibName: "CreateRoomView")
-    }
     
-    func onHomeEnterRoom(sender: UIButton) {
-        if _data == nil {
-            self.getPeerList()
-        } else {
-            //
-        }
-    }
-    
-    func onMakrRoom(sender: UIButton) {
-        if _bEstablished {
-            if userDefault.object(forKey: "setTime") != nil {
-                setTime = userDefault.object(forKey: "setTime") as! String
-                send(setTime)
-                pagingView(selfNib: "", nibName: "WaitTimeView")
-                timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
-            } else {
-                alertView(title: "エラー", message: "起床時間のロードに失敗しました", buttonName: "OK")
-            }
-        }else{
-            alertView(title: "接続未完了", message: "メンバーが接続するまでお待ち下さい", buttonName: "OK")
-        }
-    }
-    
-    func onEnterRoom(sender: UIButton) {
-        let realm = try! Realm()
-        var outString: String = ""
-        
-        for user in realm.objects(Id.self) {
-            outString = user.id
-        }
-        connect(outString)
-        
-        if setTime != "" { // 再度やるときは初期化必要
-            pagingView(selfNib: "", nibName: "WaitTimeView")
-            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
-        } else {
-            alertView(title: "起床時未設定", message: "メンバーが設定するまでお待ち下さい", buttonName: "OK")
-        }
-    }
-    
-    func onFight(sender: UIButton) {
-        myFight = true
-        send("onFight")
-        
-        if youFight {
-            pagingView(selfNib: "", nibName: "ClearView")
-            
-            self.audioPlay.audioStop()
-            self.send("end")
-        } else {
-            pagingView(selfNib: "", nibName: "StampButtonView")
-            
-            var audioPlayDelegate: AudioPlayDelegate? = nil
-            audioPlayDelegate = audioPlay
-            audioPlayDelegate?.setAudio(audioName: "bgm_01")
-            audioPlayDelegate?.audioPlay(needsLoop: true)
-        }
-    }
-    
-    func onInputID(sender: UIButton) {
-        NSLog("onInputID")
-        if _data == nil {
-            self.getPeerList()
-        } else {
-            self.performSelector(inBackground: #selector(MainViewController.close), with: nil)
-        }
-    }
-    
-    func onReturn(sender: UIButton) {
-        NSLog("onReturn")
-    
-    }
     
     func update(tm: Timer) {
         format.dateFormat = "HH:mm"
@@ -296,36 +88,6 @@ extension MainViewController {
         }
         audioPlayDelegate?.setAudio(audioName: name)
         audioPlayDelegate?.audioPlay(needsLoop: false)
-    }
-}
-
-extension MainViewController{
-    func onTapButton1(sender: UIButton) {
-        send("mezamashare_zugyuuuun")
-        stampAudio(name: "mezamashare_zugyuuuun")
-    }
-    
-    func onTapButton2(sender: UIButton) {
-        send("mezamashare_ppap4")
-        stampAudio(name: "mezamashare_ppap4")
-    }
-    
-    func onTapButton3(sender: UIButton) {
-        send("mezamashare_okiro")
-        stampAudio(name: "mezamashare_okiro")
-    }
-    
-    func onTapButton4(sender: UIButton) {
-        send("mezamashare_sukida")
-        stampAudio(name: "mezamashare_sukida")
-    }
-    
-    func onTapButton5(sender: UIButton) {
-//        send("")
-    }
-    
-    func onTapButton6(sender: UIButton) {
-//        send("")
     }
 }
 
