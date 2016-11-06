@@ -16,6 +16,7 @@ class ClearView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        pointLabel.text = "0"
         
         returnButton.addTarget(MainViewController(), action: #selector(MainViewController.onReturn(sender:)), for: .touchUpInside)
         if userDefault.object(forKey: "tapCount") != nil {
