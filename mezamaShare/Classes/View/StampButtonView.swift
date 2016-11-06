@@ -9,6 +9,7 @@
 //        bkImage1.image = UIImage(named: "buttonImage1")
 
 import UIKit
+import SimpleAnimation
 
 class StampButtonView: UIView {
     
@@ -50,5 +51,24 @@ class StampButtonView: UIView {
         button4.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton4(sender:)), for: .touchUpInside)
         button5.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton5(sender:)), for: .touchUpInside)
         button6.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton6(sender:)), for: .touchUpInside)
+    }
+    
+    @IBAction func onButton1(_ sender: UIButton) {
+        bkImage1.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+    }
+    @IBAction func onButton2(_ sender: UIButton) {
+        bkImage2.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+    }
+    @IBAction func onButton3(_ sender: UIButton) {
+        bkImage3.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+    }
+    @IBAction func onButton4(_ sender: UIButton) {
+        bkImage4.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+    }
+    @IBAction func onButton5(_ sender: UIButton) {
+        bkImage5.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
+    }
+    @IBAction func onButton6(_ sender: UIButton) {
+        bkImage6.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
     }
 }
