@@ -6,7 +6,10 @@
 //  Copyright © 2016年 AkkeyLab. All rights reserved.
 //
 
+//        bkImage1.image = UIImage(named: "buttonImage1")
+
 import UIKit
+import SimpleAnimation
 
 class StampButtonView: UIView {
     
@@ -16,14 +19,17 @@ class StampButtonView: UIView {
     @IBOutlet weak var bkImage4: UIImageView!
     @IBOutlet weak var bkImage5: UIImageView!
     @IBOutlet weak var bkImage6: UIImageView!
-    let audioPlay = AudioPlay()
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button6: UIButton!
     
-    // let audioPlay = AudioPlay()
-    // var audioPlayDelegate: AudioPlayDelegate? = nil
-    //
-    // audioPlayDelegate = audioPlay
-    // audioPlayDelegate?.setAudio(audioName: "bgm_01")
-    // audioPlayDelegate?.audioPlay(needsLoop: false)
+    
+//    let audioPlay = AudioPlay()
+    let audioPlay: [AudioPlay] = [AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay()]
+    var audioPlayerCount: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,55 +45,30 @@ class StampButtonView: UIView {
         bkImage5.layer.cornerRadius = 10
         bkImage6.layer.cornerRadius = 10
         
-//        bkImage1.image = UIImage(named: "buttonImage1")
-//        bkImage2.image = UIImage(named: "buttonImage2")
-//        bkImage3.image = UIImage(named: "buttonImage3")
-//        bkImage4.image = UIImage(named: "buttonImage4")
-//        bkImage5.image = UIImage(named: "buttonImage5")
-//        bkImage6.image = UIImage(named: "buttonImage6")
+        button1.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton1(sender:)), for: .touchUpInside)
+        button2.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton2(sender:)), for: .touchUpInside)
+        button3.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton3(sender:)), for: .touchUpInside)
+        button4.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton4(sender:)), for: .touchUpInside)
+        button5.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton5(sender:)), for: .touchUpInside)
+        button6.addTarget(MainViewController(), action: #selector(MainViewController.onTapButton6(sender:)), for: .touchUpInside)
     }
     
-    @IBAction func onTapButton1(_ sender: AnyObject) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_zugyuuuun")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
+    @IBAction func onButton1(_ sender: UIButton) {
+        bkImage1.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
     }
-    
-    @IBAction func onTapButton2(_ sender: AnyObject) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_ppap4")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
+    @IBAction func onButton2(_ sender: UIButton) {
+        bkImage2.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
     }
-    
-    @IBAction func onTapButton3(_ sender: Any) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_okiro")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
+    @IBAction func onButton3(_ sender: UIButton) {
+        bkImage3.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
     }
-    
-    @IBAction func onTapButton4(_ sender: Any) {
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "mezamashare_sukida")
-        audioPlayDelegate?.audioPlay(needsLoop: false)
+    @IBAction func onButton4(_ sender: UIButton) {
+        bkImage4.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
     }
-    
-    @IBAction func onTapButton5(_ sender: AnyObject) {
-        
+    @IBAction func onButton5(_ sender: UIButton) {
+        bkImage5.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
     }
-    
-    @IBAction func onTapButton6(_ sender: AnyObject) {
-//        var audioPlayDelegate: AudioPlayDelegate? = nil
-//        
-//        audioPlayDelegate = audioPlay
-//        audioPlayDelegate?.setAudio(audioName: "bgm_01")
-//        audioPlayDelegate?.audioPlay(needsLoop: true)
+    @IBAction func onButton6(_ sender: UIButton) {
+        bkImage6.shake(toward: .top, amount: 0.5, duration: 0.5, delay: 0.0)
     }
 }

@@ -22,11 +22,14 @@ class CreateRoomViewController: UIView {
         inputID.addTarget(MainViewController(), action: #selector(MainViewController.onInputID(sender:)), for: .touchUpInside)
     }
     
-    @IBAction func onHour(_ sender: Any) {
-        hour.text = (sender as AnyObject).value
+    
+    
+    @IBAction func onHour(_ sender: UIStepper) {
+        hour.text = String(Int(sender.value))
     }
     
-    @IBAction func omMinites(_ sender: Any) {
-        minites.text = (sender as AnyObject).value
+    
+    @IBAction func omMinites(_ sender: UIStepper) {
+        minites.text = String(Int(sender.value))
     }
 }

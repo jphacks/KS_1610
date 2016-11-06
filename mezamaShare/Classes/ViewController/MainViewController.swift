@@ -5,14 +5,8 @@
 //  Created by Akio Itaya on 2016/10/29.
 //  Copyright © 2016年 AkkeyLab. All rights reserved.
 //
-
-/*
- let view:UIView  = UINib(nibName: "StampButtonView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
- view.frame = menuView.bounds
- view.translatesAutoresizingMaskIntoConstraints = true
- view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
- menuView.addSubview(view)
- */
+import UIKit
+import RealmSwift
 
 class MainViewController: UIViewController {
 
@@ -25,20 +19,18 @@ class MainViewController: UIViewController {
     
     private var myID: String = ""
     var timer: Timer!
+    var endTimer: Timer!
     let audioPlay = AudioPlay()
+    let stampAudioPlay: [AudioPlay] = [AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay()]
+    var stampAaudioPlayerCount: Int = 0
+    var myFight: Bool = false
+    var youFight: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         webRTC()
-        //        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: Selector(("onTimer:")), userInfo: nil, repeats: true)
         
-        let view:UIView  = UINib(nibName: "StartUpView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "StartUpView")
     }
     
     func webRTC() {
@@ -64,7 +56,6 @@ class MainViewController: UIViewController {
             self._data = obj as? SKWDataConnection
             self.setDataCallbacks(self._data!)
             self._bEstablished = true
-            //            self.updateUI()
         })
     }
     
@@ -72,14 +63,24 @@ class MainViewController: UIViewController {
         
         // DataConnection opened
         data.on(SKWDataConnectionEventEnum.DATACONNECTION_EVENT_OPEN, callback: { (obj: NSObject?) -> Void in
-            self._bEstablished = true;
+            self._bEstablished = true
             self.alertView(title: "P2P接続", message: "接続に成功しました", buttonName: "OK")
         })
         
         // Partber message
         data.on(SKWDataConnectionEventEnum.DATACONNECTION_EVENT_DATA, callback: { (obj: NSObject?) -> Void in
             let strValue: String = obj as! String
-            self.alertView(title: "受信", message: strValue, buttonName: "OK")
+            NSLog("\(strValue)")
+            
+            if strValue == "onFight" {
+                self.youFight = true
+                
+            }else if strValue == "end" {
+                DispatchQueue.main.async { self.end() }
+                
+            }else{
+                self.stampAudio(name: strValue)
+            }
         })
         
         // DataConnection closed
@@ -107,7 +108,25 @@ class MainViewController: UIViewController {
                 self._listPeerIds.append(strValue)
             }
             if self._listPeerIds.count > 0 {
-                self.showPeerDialog()
+                let youID = Id()
+                let realm = try! Realm()
+                
+                try! realm.write({
+                    realm.deleteAll()
+                })
+                
+                for data in self._listPeerIds {
+                    youID.id = data
+                    
+                    try! realm.write {
+                        realm.add(youID)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.pagingView(selfNib: "", nibName: "EnterRoomView")
+                }
+            } else {
+                self.alertView(title: "未検出", message: "ペアリング相手が見つかりません", buttonName: "OK")
             }
         })
     }
@@ -121,7 +140,6 @@ class MainViewController: UIViewController {
         
         _data = _peer?.connect(withId: strDestId, options: options)
         setDataCallbacks(self._data!)
-        //        self.updateUI()
     }
     
     func close() {
@@ -139,27 +157,7 @@ class MainViewController: UIViewController {
         let bResult: Bool = (_data?.send(data as NSObject!))!
         
         if bResult == true {
-            alertView(title: "送信成功", message: "文字列の送信に成功しました", buttonName: "OK")
-        }
-    }
-    
-    func showPeerDialog() {
-        let vc: PeerListForDataViewController = PeerListForDataViewController()
-        vc.items = _listPeerIds as [AnyObject]?
-        vc.callback = self
-        
-        let nc: UINavigationController = UINavigationController.init(rootViewController: vc)
-        
-        DispatchQueue.main.async(execute: {
-            self.present(nc, animated: true, completion: nil)
-        })
-    }
-    
-    @IBAction func pushCallButton(_ sender: AnyObject) {
-        if _data == nil {
-            self.getPeerList()
-        } else {
-            self.performSelector(inBackground: #selector(MainViewController.close), with: nil)
+//            alertView(title: "送信成功", message: "文字列の送信に成功しました", buttonName: "OK")
         }
     }
     
@@ -172,87 +170,73 @@ class MainViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func onTImer(sender: Timer) {
-        //        if _bEstablished {
-        //            self.send("OK??")
-        //        }
-        
-//                if _data == nil {
-//                    self.getPeerList()
-//                } else {
-//                    self.performSelector(inBackground: #selector(CreateRoomViewController.close), with: nil)
-//                }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }
 
 extension MainViewController {
     func onHomeMakeRoom(sender: UIButton) {
-        let view:UIView  = UINib(nibName: "CreateRoomView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "CreateRoomView")
     }
     
     func onHomeEnterRoom(sender: UIButton) {
-        let view:UIView  = UINib(nibName: "EnterRoomView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        if _data == nil {
+            self.getPeerList()
+        } else {
+            //
+        }
     }
     
     func onMakrRoom(sender: UIButton) {
-        let view:UIView  = UINib(nibName: "WaitTimeView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
-        // timer.fire()
+        if _bEstablished {
+            pagingView(selfNib: "", nibName: "WaitTimeView")
+            timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
+        }else{
+            alertView(title: "接続未完了", message: "メンバーが接続するまでお待ち下さい", buttonName: "OK")
+        }
     }
     
     func onEnterRoom(sender: UIButton) {
-        let view:UIView  = UINib(nibName: "WaitTimeView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "WaitTimeView")
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
-        // timer.fire()
+    }
+    
+    func onEnterBuddyRoom(sender: UIButton) {
+        let realm = try! Realm()
+        var outString: String = ""
+        
+        for user in realm.objects(Id.self) {
+            outString = user.id
+        }
+        connect(outString)
+        
+        pagingView(selfNib: "", nibName: "WaitTimeView")
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: false)
     }
     
     func onFight(sender: UIButton) {
-        let view:UIView  = UINib(nibName: "StampButtonView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        myFight = true
+        send("onFight")
         
-        var audioPlayDelegate: AudioPlayDelegate? = nil
-        audioPlayDelegate = audioPlay
-        audioPlayDelegate?.setAudio(audioName: "bgm_01")
-        audioPlayDelegate?.audioPlay(needsLoop: true)
+        if youFight {
+            pagingView(selfNib: "", nibName: "ClearView")
+            
+            self.audioPlay.audioStop()
+            self.send("end")
+        } else {
+            pagingView(selfNib: "", nibName: "StampButtonView")
+            
+            var audioPlayDelegate: AudioPlayDelegate? = nil
+            audioPlayDelegate = audioPlay
+            audioPlayDelegate?.setAudio(audioName: "bgm_01")
+            audioPlayDelegate?.audioPlay(needsLoop: true)
+        }
     }
     
-    
     func onInputID(sender: UIButton) {
+        NSLog("onInputID")
         if _data == nil {
             self.getPeerList()
         } else {
@@ -261,19 +245,84 @@ extension MainViewController {
     }
     
     func onReturn(sender: UIButton) {
+        NSLog("onReturn")
     
     }
     
     func update(tm: Timer) {
-        let view:UIView  = UINib(nibName: "WakeUpView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = mainView.bounds
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        mainView.addSubview(view)
+        pagingView(selfNib: "", nibName: "WakeUpView")
         
         var audioPlayDelegate: AudioPlayDelegate? = nil
         audioPlayDelegate = audioPlay
         audioPlayDelegate?.setAudio(audioName: "bgm_01")
         audioPlayDelegate?.audioPlay(needsLoop: true)
+    }
+    
+    func end(){
+        if self.myFight {
+            pagingView(selfNib: "", nibName: "ClearView")
+            audioPlay.audioStop()
+        }
+    }
+    
+    func stampAudio(name: String){
+        let audioPlayDelegate: AudioPlayDelegate? = stampAudioPlay[stampAaudioPlayerCount]
+        if stampAudioPlay.count == (stampAaudioPlayerCount + 1) {
+            stampAaudioPlayerCount = 0
+        }else{
+            stampAaudioPlayerCount += 1
+        }
+        audioPlayDelegate?.setAudio(audioName: name)
+        audioPlayDelegate?.audioPlay(needsLoop: false)
+    }
+}
+
+extension MainViewController{
+    func onTapButton1(sender: UIButton) {
+        send("mezamashare_zugyuuuun")
+        stampAudio(name: "mezamashare_zugyuuuun")
+    }
+    
+    func onTapButton2(sender: UIButton) {
+        send("mezamashare_ppap4")
+        stampAudio(name: "mezamashare_ppap4")
+    }
+    
+    func onTapButton3(sender: UIButton) {
+        send("mezamashare_okiro")
+        stampAudio(name: "mezamashare_okiro")
+    }
+    
+    func onTapButton4(sender: UIButton) {
+        send("mezamashare_sukida")
+        stampAudio(name: "mezamashare_sukida")
+    }
+    
+    func onTapButton5(sender: UIButton) {
+//        send("")
+    }
+    
+    func onTapButton6(sender: UIButton) {
+//        send("")
+    }
+}
+
+extension MainViewController {
+    func pagingView(selfNib: String, nibName: String) {
+        NSLog("Paging by \(nibName)")
+        let view:UIView  = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = mainView.bounds
+        view.translatesAutoresizingMaskIntoConstraints = true
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        removeAllSubviews(parentView: mainView)
+        mainView.addSubview(view)
+    }
+    
+    
+    func removeAllSubviews(parentView: UIView){
+        let subviews = parentView.subviews
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
     }
 }

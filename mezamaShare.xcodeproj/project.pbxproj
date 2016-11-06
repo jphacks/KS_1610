@@ -10,6 +10,7 @@
 		0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D985D701DC46395009EB50A /* AudioPlay.swift */; };
 		0D985D7A1DC49A0A009EB50A /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D985D791DC49A0A009EB50A /* Id.swift */; };
 		3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */; };
+		667C26091DCEABE3001579F5 /* SimpleAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667C26081DCEABE3001579F5 /* SimpleAnimation.framework */; };
 		66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96B1DAF1042004BBEED /* Assets.xcassets */; };
 		66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */; };
 		66B2D97A1DAF1042004BBEED /* mezamaShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9791DAF1042004BBEED /* mezamaShareTests.swift */; };
@@ -28,8 +29,6 @@
 		EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155881DC47F270055643F /* StampButtonView.swift */; };
 		EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2155891DC47F270055643F /* StampButtonView.xib */; };
 		EA21558F1DC495020055643F /* bgm_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA21558E1DC495020055643F /* bgm_01.mp3 */; };
-		EA35B9A91DC57ED700625E17 /* PeerListForDataViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */; };
-		EA35B9AB1DC57EE400625E17 /* PeerListForDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */; };
 		EA35B9AD1DC59ECB00625E17 /* CreateRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9AC1DC59ECB00625E17 /* CreateRoomView.xib */; };
 		EA35B9AF1DC59EE800625E17 /* EnterRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9AE1DC59EE800625E17 /* EnterRoomView.xib */; };
 		EA35B9B11DC59F3700625E17 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9B01DC59F3700625E17 /* WaitTimeView.xib */; };
@@ -67,6 +66,8 @@
 		0D985D701DC46395009EB50A /* AudioPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlay.swift; path = Classes/ViewController/AudioPlay.swift; sourceTree = "<group>"; };
 		0D985D791DC49A0A009EB50A /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Id.swift; path = Classes/ViewController/Id.swift; sourceTree = "<group>"; };
 		49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.debug.xcconfig"; sourceTree = "<group>"; };
+		667C26061DCEABC3001579F5 /* SimpleAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleAnimation.framework; path = Carthage/Build/iOS/SimpleAnimation.framework; sourceTree = "<group>"; };
+		667C26081DCEABE3001579F5 /* SimpleAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleAnimation.framework; path = Carthage/Build/iOS/SimpleAnimation.framework; sourceTree = "<group>"; };
 		66B2D9611DAF1042004BBEED /* mezamaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mezamaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B2D96B1DAF1042004BBEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66B2D96E1DAF1042004BBEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,8 +97,6 @@
 		EA2155891DC47F270055643F /* StampButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StampButtonView.xib; path = Classes/View/StampButtonView.xib; sourceTree = "<group>"; };
 		EA21558E1DC495020055643F /* bgm_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm_01.mp3; path = Resources/Audio/bgm_01.mp3; sourceTree = "<group>"; };
 		EA2155901DC509FF0055643F /* mezamaShare_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mezamaShare_Bridging_Header.h; sourceTree = "<group>"; };
-		EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PeerListForDataViewController.storyboard; path = Classes/Layout/PeerListForDataViewController.storyboard; sourceTree = "<group>"; };
-		EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeerListForDataViewController.swift; path = Classes/ViewController/PeerListForDataViewController.swift; sourceTree = "<group>"; };
 		EA35B9AC1DC59ECB00625E17 /* CreateRoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateRoomView.xib; path = Classes/View/CreateRoomView.xib; sourceTree = "<group>"; };
 		EA35B9AE1DC59EE800625E17 /* EnterRoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EnterRoomView.xib; path = Classes/View/EnterRoomView.xib; sourceTree = "<group>"; };
 		EA35B9B01DC59F3700625E17 /* WaitTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WaitTimeView.xib; path = Classes/View/WaitTimeView.xib; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 			files = (
 				66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */,
 				66B2D9971DAF3597004BBEED /* RealmSwift.framework in Frameworks */,
+				667C26091DCEABE3001579F5 /* SimpleAnimation.framework in Frameworks */,
 				66B2D9951DAF357A004BBEED /* Realm.framework in Frameworks */,
 				3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */,
 			);
@@ -159,6 +159,7 @@
 		66B2D9581DAF1042004BBEED = {
 			isa = PBXGroup;
 			children = (
+				667C26081DCEABE3001579F5 /* SimpleAnimation.framework */,
 				66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */,
 				66B2D9961DAF3597004BBEED /* RealmSwift.framework */,
 				66B2D9941DAF357A004BBEED /* Realm.framework */,
@@ -213,6 +214,7 @@
 		A92C3A1C990F7F14BE3C4F4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				667C26061DCEABC3001579F5 /* SimpleAnimation.framework */,
 				D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */,
 				7E7124FA7F1C90E7F6F5775A /* Pods_mezamaShareTests.framework */,
 				75AFDA52917E66BA14A5B489 /* Pods_mezamaShareUITests.framework */,
@@ -257,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				EA35B9B61DC5AE2500625E17 /* Main.storyboard */,
-				EA35B9A81DC57ED700625E17 /* PeerListForDataViewController.storyboard */,
 				66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */,
 			);
 			name = Layout;
@@ -309,7 +310,6 @@
 		EA2155771DC437EA0055643F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA35B9AA1DC57EE400625E17 /* PeerListForDataViewController.swift */,
 				0D985D791DC49A0A009EB50A /* Id.swift */,
 				0D985D701DC46395009EB50A /* AudioPlay.swift */,
 				EA2155781DC45EA80055643F /* ViewController.swift */,
@@ -451,7 +451,6 @@
 				EA35B9B11DC59F3700625E17 /* WaitTimeView.xib in Resources */,
 				EA21558B1DC47F270055643F /* StampButtonView.xib in Resources */,
 				EA35B9AD1DC59ECB00625E17 /* CreateRoomView.xib in Resources */,
-				EA35B9A91DC57ED700625E17 /* PeerListForDataViewController.storyboard in Resources */,
 				EA35B9B31DC59F6500625E17 /* WakeUpView.xib in Resources */,
 				EA35B9C61DC5C1D700625E17 /* mezamashare_ppap4.mp3 in Resources */,
 			);
@@ -498,6 +497,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SimpleAnimation.framework",
 			);
 			outputPaths = (
 			);
@@ -554,7 +554,6 @@
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,
 				EA21558A1DC47F270055643F /* StampButtonView.swift in Sources */,
 				0D985D7A1DC49A0A009EB50A /* Id.swift in Sources */,
-				EA35B9AB1DC57EE400625E17 /* PeerListForDataViewController.swift in Sources */,
 				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +711,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = mezamaShare/mezamaShare_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -732,6 +732,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = mezamaShare/mezamaShare_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

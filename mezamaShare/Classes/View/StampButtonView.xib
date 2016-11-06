@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GO-Qk-XZ9">
                             <rect key="frame" x="176" y="0.0" width="155" height="155"/>
                             <connections>
-                                <action selector="onTapButton2:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="jSa-bk-VuV"/>
+                                <action selector="onButton2:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="kkb-py-DKb"/>
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonImage1" translatesAutoresizingMaskIntoConstraints="NO" id="L8s-sY-43J">
@@ -42,7 +42,7 @@
                                 <constraint firstAttribute="width" secondItem="mjS-Pm-tXq" secondAttribute="height" multiplier="1:1" id="U2m-cb-K8k"/>
                             </constraints>
                             <connections>
-                                <action selector="onTapButton1:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="tdV-24-Rp1"/>
+                                <action selector="onButton1:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Jkt-uY-CSs"/>
                             </connections>
                         </button>
                     </subviews>
@@ -77,7 +77,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWU-bi-oVG">
                             <rect key="frame" x="176" y="0.0" width="155" height="155"/>
                             <connections>
-                                <action selector="onTapButton4:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="kfN-hh-bDA"/>
+                                <action selector="onButton4:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="IBo-8G-T5X"/>
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="okiroImage" translatesAutoresizingMaskIntoConstraints="NO" id="ALc-96-0OP">
@@ -93,7 +93,7 @@
                                 <constraint firstAttribute="width" secondItem="JI2-aq-tzD" secondAttribute="height" multiplier="1:1" id="0oP-23-AyC"/>
                             </constraints>
                             <connections>
-                                <action selector="onTapButton3:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="5hG-fM-j2m"/>
+                                <action selector="onButton3:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="ech-tU-ETN"/>
                             </connections>
                         </button>
                     </subviews>
@@ -157,17 +157,15 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonImage6" translatesAutoresizingMaskIntoConstraints="NO" id="2Nm-4b-Ro4">
                             <rect key="frame" x="176" y="0.0" width="155" height="155"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGr-fd-Le4">
                             <rect key="frame" x="176" y="0.0" width="155" height="155"/>
                             <connections>
-                                <action selector="onTapButton6:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="t99-Q8-rzs"/>
+                                <action selector="onButton6:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="UJu-IQ-kU2"/>
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonImage5" translatesAutoresizingMaskIntoConstraints="NO" id="KSl-Ov-hUY">
                             <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="KSl-Ov-hUY" secondAttribute="height" multiplier="1:1" id="Lxg-Ej-5Db"/>
                             </constraints>
@@ -178,7 +176,7 @@
                                 <constraint firstAttribute="width" secondItem="i1J-rQ-uZz" secondAttribute="height" multiplier="1:1" id="v39-v9-vj0"/>
                             </constraints>
                             <connections>
-                                <action selector="onTapButton5:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Srm-cP-q5u"/>
+                                <action selector="onButton5:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="rog-SJ-gf8"/>
                             </connections>
                         </button>
                     </subviews>
@@ -236,6 +234,12 @@
                 <outlet property="bkImage4" destination="V6L-Wp-d2D" id="wKi-kI-ozq"/>
                 <outlet property="bkImage5" destination="KSl-Ov-hUY" id="gMj-oa-msj"/>
                 <outlet property="bkImage6" destination="2Nm-4b-Ro4" id="wja-3v-gNF"/>
+                <outlet property="button1" destination="mjS-Pm-tXq" id="wnQ-Xh-EH8"/>
+                <outlet property="button2" destination="8GO-Qk-XZ9" id="FBo-iR-KQf"/>
+                <outlet property="button3" destination="JI2-aq-tzD" id="wZt-6e-3Dg"/>
+                <outlet property="button4" destination="xWU-bi-oVG" id="l9P-AG-CS0"/>
+                <outlet property="button5" destination="i1J-rQ-uZz" id="9sp-9T-IJ9"/>
+                <outlet property="button6" destination="FGr-fd-Le4" id="rMs-uf-USj"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="27.5"/>
         </view>
