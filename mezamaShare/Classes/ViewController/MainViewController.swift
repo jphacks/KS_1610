@@ -101,6 +101,11 @@ extension MainViewController {
         if self.myFight {
             pagingView(selfNib: "", nibName: "ClearView")
             audioPlay.audioStop()
+            
+            var audioPlayDelegate: AudioPlayDelegate? = nil
+            audioPlayDelegate = audioPlay
+            audioPlayDelegate?.setAudio(audioName: "mezamashare_good-morning")
+            audioPlayDelegate?.audioPlay(needsLoop: false)
         }
     }
 }
