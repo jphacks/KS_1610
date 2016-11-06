@@ -10,6 +10,7 @@
 		0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D985D701DC46395009EB50A /* AudioPlay.swift */; };
 		0D985D7A1DC49A0A009EB50A /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D985D791DC49A0A009EB50A /* Id.swift */; };
 		3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */; };
+		667C26091DCEABE3001579F5 /* SimpleAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667C26081DCEABE3001579F5 /* SimpleAnimation.framework */; };
 		66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96B1DAF1042004BBEED /* Assets.xcassets */; };
 		66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */; };
 		66B2D97A1DAF1042004BBEED /* mezamaShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D9791DAF1042004BBEED /* mezamaShareTests.swift */; };
@@ -65,6 +66,8 @@
 		0D985D701DC46395009EB50A /* AudioPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlay.swift; path = Classes/ViewController/AudioPlay.swift; sourceTree = "<group>"; };
 		0D985D791DC49A0A009EB50A /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Id.swift; path = Classes/ViewController/Id.swift; sourceTree = "<group>"; };
 		49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.debug.xcconfig"; sourceTree = "<group>"; };
+		667C26061DCEABC3001579F5 /* SimpleAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleAnimation.framework; path = Carthage/Build/iOS/SimpleAnimation.framework; sourceTree = "<group>"; };
+		667C26081DCEABE3001579F5 /* SimpleAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleAnimation.framework; path = Carthage/Build/iOS/SimpleAnimation.framework; sourceTree = "<group>"; };
 		66B2D9611DAF1042004BBEED /* mezamaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mezamaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B2D96B1DAF1042004BBEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66B2D96E1DAF1042004BBEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 			files = (
 				66B2D9991DAF35AB004BBEED /* SwiftyJSON.framework in Frameworks */,
 				66B2D9971DAF3597004BBEED /* RealmSwift.framework in Frameworks */,
+				667C26091DCEABE3001579F5 /* SimpleAnimation.framework in Frameworks */,
 				66B2D9951DAF357A004BBEED /* Realm.framework in Frameworks */,
 				3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */,
 			);
@@ -155,6 +159,7 @@
 		66B2D9581DAF1042004BBEED = {
 			isa = PBXGroup;
 			children = (
+				667C26081DCEABE3001579F5 /* SimpleAnimation.framework */,
 				66B2D9981DAF35AB004BBEED /* SwiftyJSON.framework */,
 				66B2D9961DAF3597004BBEED /* RealmSwift.framework */,
 				66B2D9941DAF357A004BBEED /* Realm.framework */,
@@ -209,6 +214,7 @@
 		A92C3A1C990F7F14BE3C4F4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				667C26061DCEABC3001579F5 /* SimpleAnimation.framework */,
 				D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */,
 				7E7124FA7F1C90E7F6F5775A /* Pods_mezamaShareTests.framework */,
 				75AFDA52917E66BA14A5B489 /* Pods_mezamaShareUITests.framework */,
@@ -491,6 +497,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SimpleAnimation.framework",
 			);
 			outputPaths = (
 			);
