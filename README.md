@@ -45,11 +45,11 @@ LINEでスタンプ連打する間隔で音声スタンプをリアルタイム�
 *
 *
 
-### Used library (Carthage)
-- iOS_PDFramework
+### Used library
 - SkyWay-iOS-SDK
 - realm-cocoa
 - SwiftyJSON
+- SimpleAnimation
 
 #### デバイス
 * iOS端末
