@@ -31,6 +31,9 @@ class MainViewController: UIViewController {
     var setTime: String = ""
     var canTimer: Bool = true
     
+    var stampBaseView: WakeUpView!
+    var pasteStampCount: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         webRTC()
@@ -65,6 +68,10 @@ class MainViewController: UIViewController {
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         removeAllSubviews(parentView: mainView)
         mainView.addSubview(view)
+        
+        if nibName == "WakeUpView" {
+            stampBaseView = view as! WakeUpView
+        }
     }
     
     func removeAllSubviews(parentView: UIView){
