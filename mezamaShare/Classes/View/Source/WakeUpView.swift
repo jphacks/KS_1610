@@ -10,6 +10,7 @@ import UIKit
 
 class WakeUpView: UIView {
     @IBOutlet weak var fightButton: UIButton!
+    @IBOutlet weak var nowTime: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +23,7 @@ class WakeUpView: UIView {
         audioPlayDelegate = audioPlay
         audioPlayDelegate?.setAudio(audioName: "bgm_01")
         audioPlayDelegate?.audioPlay(needsLoop: true)
+        
+        nowTime.font = UIFont(name: "CometStd-B", size: 40)
     }
 }

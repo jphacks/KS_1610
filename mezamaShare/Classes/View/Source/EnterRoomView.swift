@@ -61,6 +61,7 @@ class EnterRoomView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath)
         cell.textLabel!.text = items[(indexPath as NSIndexPath).row] as String
+        cell.textLabel?.font = UIFont(name: "CometStd-B", size: 17)
         cell.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = UIColor.white
         

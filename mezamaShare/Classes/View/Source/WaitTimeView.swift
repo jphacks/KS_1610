@@ -15,6 +15,10 @@ class WaitTimeView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        roomNameLabel.font = UIFont(name: "CometStd-B", size: 20)
+        myID.font = UIFont(name: "CometStd-B", size: 20)
+        
         if userDefault.object(forKey: "myID") != nil {
             roomNameLabel.text = userDefault.object(forKey: "myID") as? String
             myID.text = userDefault.object(forKey: "myID") as? String
