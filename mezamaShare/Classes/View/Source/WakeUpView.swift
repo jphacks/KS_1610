@@ -11,6 +11,7 @@ import UIKit
 class WakeUpView: UIView {
     @IBOutlet weak var fightButton: UIButton!
     @IBOutlet weak var nowTime: UILabel!
+    @IBOutlet weak var baseView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
