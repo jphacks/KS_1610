@@ -40,6 +40,7 @@
 		66DB77941DCF715B00D4F094 /* WaitTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DB778D1DCF715B00D4F094 /* WaitTimeView.swift */; };
 		66DB77951DCF715B00D4F094 /* WakeUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DB778E1DCF715B00D4F094 /* WakeUpView.swift */; };
 		66DB77971DCF718500D4F094 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DB77961DCF718500D4F094 /* Id.swift */; };
+		66EEE89F1DDE044E00F88383 /* SelectStampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EEE89E1DDE044E00F88383 /* SelectStampController.swift */; };
 		EA2155791DC45EA80055643F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155781DC45EA80055643F /* ViewController.swift */; };
 		EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557A1DC45F0C0055643F /* AppDelegate.swift */; };
 		EA21557D1DC465AD0055643F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21557C1DC465AD0055643F /* MainViewController.swift */; };
@@ -107,6 +108,7 @@
 		66DB778D1DCF715B00D4F094 /* WaitTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitTimeView.swift; path = Classes/View/Source/WaitTimeView.swift; sourceTree = "<group>"; };
 		66DB778E1DCF715B00D4F094 /* WakeUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WakeUpView.swift; path = Classes/View/Source/WakeUpView.swift; sourceTree = "<group>"; };
 		66DB77961DCF718500D4F094 /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Id.swift; path = Classes/Model/Id.swift; sourceTree = "<group>"; };
+		66EEE89E1DDE044E00F88383 /* SelectStampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectStampController.swift; path = Classes/ViewController/SelectStampController.swift; sourceTree = "<group>"; };
 		75AFDA52917E66BA14A5B489 /* Pods_mezamaShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7124FA7F1C90E7F6F5775A /* Pods_mezamaShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mezamaShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA0801441509D84D3CE072 /* Pods-mezamaShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				EA2155841DC467A00055643F /* FightViewController.swift */,
 				66DB776A1DCF665300D4F094 /* RealmController.swift */,
 				66DB776C1DCF66BD00D4F094 /* ButtonActionController.swift */,
+				66EEE89E1DDE044E00F88383 /* SelectStampController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				66DB77691DCF5E0100D4F094 /* SkyWayController.swift in Sources */,
 				EA21557B1DC45F0C0055643F /* AppDelegate.swift in Sources */,
 				0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */,
+				66EEE89F1DDE044E00F88383 /* SelectStampController.swift in Sources */,
 				66DB77911DCF715B00D4F094 /* EnterRoomView.swift in Sources */,
 				66DB77901DCF715B00D4F094 /* CreateRoomView.swift in Sources */,
 				EA2155791DC45EA80055643F /* ViewController.swift in Sources */,

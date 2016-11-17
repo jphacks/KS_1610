@@ -33,6 +33,8 @@ class MainViewController: UIViewController {
     
     var stampBaseView: WakeUpView!
     var pasteStampCount: Int = 0
+    var saName: [String] = ["","","","","","","","",""] // ここにスタンプ素材をすべてセット
+    var outSAName: [Int] = [0, 0, 0, 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class MainViewController: UIViewController {
         userDefault.set(0, forKey: "tapCount") // Reset score
         
         webRTC()
+        setupStamp()
         pagingView(selfNib: "", nibName: "StartUpView")
     }
     

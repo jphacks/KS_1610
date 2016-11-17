@@ -93,6 +93,6 @@ class StampButtonView: UIView {
             countLabel.text = String(100 - tapCount)
         }
         userDefault.set(tapCount, forKey: "tapCount")
-        self.userDefault.synchronize()
+        userDefault.synchronize()
     }
 }
