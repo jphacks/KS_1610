@@ -33,13 +33,13 @@ class MainViewController: UIViewController {
     
     var stampBaseView: WakeUpView!
     var pasteStampCount: Int = 0
-    var saName: [String] = ["","","","","","","","",""] // ここにスタンプ素材をすべてセット
-    var outSAName: [Int] = [0, 0, 0, 0]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userDefault.set(0, forKey: "tapCount") // Reset score
+        userDefault.synchronize()
         
         webRTC()
         setupStamp()

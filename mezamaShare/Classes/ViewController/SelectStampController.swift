@@ -17,6 +17,10 @@ extension MainViewController {
     }
     
     func setupStamp() {
+        let saName: [String] = ["A","B","C","D","E","F","G","H","I"] // ここにスタンプ素材をすべてセット
+        var outSAName: [Int] = [0, 0, 0, 0]
+        var outSANameString: [String] = ["", "", "", ""]
+        
         var num: [Int] = []
         
         var j: Int = 0
@@ -43,6 +47,26 @@ extension MainViewController {
             
             i += 1
         }
-        print("Array: \(outSAName)")
+        
+        var l: Int = 0
+        for _ in outSAName {
+            outSANameString[l] = saName[outSAName[l]]
+            l += 1
+        }
+        
+        userDefault.set(outSANameString, forKey: "SAName")
+        userDefault.synchronize()
+        
+        /* out put array data
+         *
+        var names: [String] = []
+        if((userDefault.object(forKey: "SAName")) != nil){
+            let objects = userDefault.object(forKey: "SAName") as? NSArray
+            
+            for nameString in objects!{
+                names.append((nameString as! NSString) as String)
+            }
+        }
+        */
     }
 }
