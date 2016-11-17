@@ -46,6 +46,7 @@
 		EA2155851DC467A00055643F /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2155841DC467A00055643F /* FightViewController.swift */; };
 		EA21558F1DC495020055643F /* bgm_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA21558E1DC495020055643F /* bgm_01.mp3 */; };
 		EA35B9B81DC5AE2500625E17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35B9B61DC5AE2500625E17 /* Main.storyboard */; };
+		EA68F8891DDC358C00EFCB5C /* FOT-CometStd-B.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA68F8881DDC358C00EFCB5C /* FOT-CometStd-B.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		EA21558E1DC495020055643F /* bgm_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm_01.mp3; path = Resources/Audio/bgm_01.mp3; sourceTree = "<group>"; };
 		EA2155901DC509FF0055643F /* mezamaShare_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mezamaShare_Bridging_Header.h; sourceTree = "<group>"; };
 		EA35B9B71DC5AE2500625E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA68F8881DDC358C00EFCB5C /* FOT-CometStd-B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FOT-CometStd-B.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 		EA2155701DC4377A0055643F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA9541011DDC31D6000141C6 /* Font */,
 				0D985D721DC471B2009EB50A /* Audio */,
 				66B2D96B1DAF1042004BBEED /* Assets.xcassets */,
 			);
@@ -348,6 +351,14 @@
 				66DB776C1DCF66BD00D4F094 /* ButtonActionController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		EA9541011DDC31D6000141C6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EA68F8881DDC358C00EFCB5C /* FOT-CometStd-B.otf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +435,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8A3KGY7724;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					66B2D9741DAF1042004BBEED = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -462,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA68F8891DDC358C00EFCB5C /* FOT-CometStd-B.otf in Resources */,
 				66DB77831DCF711500D4F094 /* EnterRoomView.xib in Resources */,
 				66DB77841DCF711500D4F094 /* StampButtonView.xib in Resources */,
 				66DB77821DCF711500D4F094 /* CreateRoomView.xib in Resources */,
@@ -727,6 +740,7 @@
 			baseConfigurationReference = 49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8A3KGY7724;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -748,6 +762,7 @@
 			baseConfigurationReference = 8ADA0801441509D84D3CE072 /* Pods-mezamaShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8A3KGY7724;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

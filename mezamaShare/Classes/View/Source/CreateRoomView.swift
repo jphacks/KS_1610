@@ -20,6 +20,8 @@ class CreateRoomView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        idLabel.font = UIFont(name: "CometStd-B", size: 20)
+        
         if userDefault.object(forKey: "myID") != nil {
             idLabel.text = userDefault.object(forKey: "myID") as? String
         }

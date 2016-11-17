@@ -6,6 +6,7 @@
 //  Copyright © 2016年 AkkeyLab. All rights reserved.
 //
 import UIKit
+import SimpleAnimation
 
 extension MainViewController {
     
@@ -56,6 +57,7 @@ extension MainViewController {
                 
             }else if self.decisionMessage(type: 3, name: strValue) {
                 self.stampAudio(name: strValue)
+                DispatchQueue.main.async { self.addStamp(name: "buttonImage1") }//strValue) }
                 
             }else{
                 self.setTime = strValue
@@ -124,6 +126,55 @@ extension MainViewController {
         if bResult == true {
             // OK send
         }
+    }
+    
+    func addStamp(name: String) {
+        switch pasteStampCount {
+        case 0:
+            stampBaseView.stampWidth01.constant = stampBaseView.stamp01.bounds.size.height
+            stampBaseView.stamp01.image = UIImage(named: name) // 音声と画像が同じ名前である必要がある
+            stampBaseView.stamp01.bounceIn(from: .right)
+        case 1:
+            stampBaseView.stampWidth02.constant = stampBaseView.stamp02.bounds.size.height
+            stampBaseView.stamp02.image = UIImage(named: name)
+            stampBaseView.stamp02.bounceIn(from: .right)
+        case 2:
+            stampBaseView.stampWidth03.constant = stampBaseView.stamp03.bounds.size.height
+            stampBaseView.stamp03.image = UIImage(named: name)
+            stampBaseView.stamp03.popIn()
+        case 3:
+            stampBaseView.stampWidth04.constant = stampBaseView.stamp04.bounds.size.height
+            stampBaseView.stamp04.image = UIImage(named: name)
+            stampBaseView.stamp04.popIn()
+        case 4:
+            stampBaseView.stampWidth05.constant = stampBaseView.stamp05.bounds.size.height
+            stampBaseView.stamp05.image = UIImage(named: name)
+            stampBaseView.stamp05.bounceIn(from: .left)
+        case 5:
+            stampBaseView.stampWidth06.constant = stampBaseView.stamp06.bounds.size.height
+            stampBaseView.stamp06.image = UIImage(named: name)
+            stampBaseView.stamp06.popIn()
+        case 6:
+            stampBaseView.stampWidth07.constant = stampBaseView.stamp07.bounds.size.height
+            stampBaseView.stamp07.image = UIImage(named: name)
+            stampBaseView.stamp07.bounceIn(from: .bottom)
+        case 7:
+            stampBaseView.stampWidth08.constant = stampBaseView.stamp08.bounds.size.height
+            stampBaseView.stamp08.image = UIImage(named: name)
+            stampBaseView.stamp08.popIn()
+        case 8:
+            stampBaseView.stampWidth09.constant = stampBaseView.stamp09.bounds.size.height
+            stampBaseView.stamp09.image = UIImage(named: name)
+            stampBaseView.stamp09.bounceIn(from: .left)
+        case 9:
+            stampBaseView.stampWidth10.constant = stampBaseView.stamp10.bounds.size.height
+            stampBaseView.stamp10.image = UIImage(named: name)
+            stampBaseView.stamp10.bounceIn(from: .top)
+        default:
+            pasteStampCount = -1
+        }
+        
+        pasteStampCount += 1
     }
     
     func decisionMessage(type: Int, name: String) -> Bool {

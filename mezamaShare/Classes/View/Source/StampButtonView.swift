@@ -38,7 +38,10 @@ class StampButtonView: UIView {
         super.awakeFromNib()
         
         countLabel.text = "100"
+        countLabel.font = UIFont(name: "CometStd-B", size: 30)
         buttonSetup()
+        
+        self.userDefault.synchronize()
     }
     
     func buttonSetup(){

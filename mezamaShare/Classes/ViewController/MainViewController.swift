@@ -31,8 +31,14 @@ class MainViewController: UIViewController {
     var setTime: String = ""
     var canTimer: Bool = true
     
+    var stampBaseView: WakeUpView!
+    var pasteStampCount: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userDefault.set(0, forKey: "tapCount") // Reset score
+        
         webRTC()
         pagingView(selfNib: "", nibName: "StartUpView")
     }
@@ -48,11 +54,13 @@ class MainViewController: UIViewController {
     
     func stampAudio(name: String){
         let audioPlayDelegate: AudioPlayDelegate? = stampAudioPlay[stampAaudioPlayerCount]
+        
         if stampAudioPlay.count == (stampAaudioPlayerCount + 1) {
             stampAaudioPlayerCount = 0
         }else{
             stampAaudioPlayerCount += 1
         }
+        
         audioPlayDelegate?.setAudio(audioName: name)
         audioPlayDelegate?.audioPlay(needsLoop: false)
     }
@@ -65,6 +73,10 @@ class MainViewController: UIViewController {
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         removeAllSubviews(parentView: mainView)
         mainView.addSubview(view)
+        
+        if nibName == "WakeUpView" {
+            stampBaseView = view as! WakeUpView
+        }
     }
     
     func removeAllSubviews(parentView: UIView){
