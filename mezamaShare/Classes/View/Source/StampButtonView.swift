@@ -41,7 +41,6 @@ class StampButtonView: UIView {
         countLabel.font = UIFont(name: "CometStd-B", size: 30)
         buttonSetup()
         
-        userDefault.set(0, forKey: "tapCount")
         self.userDefault.synchronize()
     }
     

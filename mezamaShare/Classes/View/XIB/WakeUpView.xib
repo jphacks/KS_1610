@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +18,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imaImage" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-bO-pRM">
+                    <rect key="frame" x="16" y="20" width="343" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="VDr-bO-pRM" secondAttribute="height" multiplier="343:40" id="b6L-3c-hWE"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM 6:31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-O3-eas">
+                    <rect key="frame" x="16" y="68" width="343" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ifb-O3-eas" secondAttribute="height" multiplier="49:10" id="FNC-EM-2T3"/>
                     </constraints>
@@ -28,66 +33,79 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nonwakeImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Mj-iD-lfM">
+                    <rect key="frame" x="16" y="146" width="343" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="2Mj-iD-lfM" secondAttribute="height" multiplier="343:40" id="M0b-uT-dSB"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fightImage" translatesAutoresizingMaskIntoConstraints="NO" id="bML-SQ-FDS">
+                    <rect key="frame" x="16" y="472" width="343" height="111"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="bML-SQ-FDS" secondAttribute="height" multiplier="343:111" id="Jnh-Kk-rAN"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mn9-In-HIR">
+                    <rect key="frame" x="16" y="472" width="343" height="111"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="mn9-In-HIR" secondAttribute="height" multiplier="343:111" id="vVD-Kd-gog"/>
                     </constraints>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gyk-hX-e4C">
+                    <rect key="frame" x="204" y="20" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="oPs-yn-nWX"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DB2-ca-4xr">
+                    <rect key="frame" x="204" y="194" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="hiA-gT-rbi"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shu-Mi-gCa">
+                    <rect key="frame" x="110" y="91" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="Xkr-th-RPh"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hRl-vJ-fnE">
+                    <rect key="frame" x="16" y="254" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="xfY-Su-nLj"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yCa-vK-x9I">
+                    <rect key="frame" x="110" y="265" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="Ne3-En-ldj"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3XP-rI-ZL0">
+                    <rect key="frame" x="204" y="428" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="HB5-1O-rfe"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rvT-tL-zPX">
+                    <rect key="frame" x="179" y="309" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="hCb-Sl-zFF"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWU-sf-R4p">
+                    <rect key="frame" x="16" y="427" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="WTX-YJ-srR"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ly7-3m-hAG">
+                    <rect key="frame" x="16" y="20" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="zUV-a2-g0L"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U4W-qH-0Lp">
+                    <rect key="frame" x="41" y="146" width="155" height="155"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="155" id="mN2-Th-qlH"/>
                     </constraints>

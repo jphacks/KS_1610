@@ -435,6 +435,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8A3KGY7724;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					66B2D9741DAF1042004BBEED = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -739,6 +740,7 @@
 			baseConfigurationReference = 49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8A3KGY7724;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -760,6 +762,7 @@
 			baseConfigurationReference = 8ADA0801441509D84D3CE072 /* Pods-mezamaShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8A3KGY7724;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

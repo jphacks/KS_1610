@@ -36,6 +36,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userDefault.set(0, forKey: "tapCount") // Reset score
+        
         webRTC()
         pagingView(selfNib: "", nibName: "StartUpView")
     }
@@ -51,11 +54,13 @@ class MainViewController: UIViewController {
     
     func stampAudio(name: String){
         let audioPlayDelegate: AudioPlayDelegate? = stampAudioPlay[stampAaudioPlayerCount]
+        
         if stampAudioPlay.count == (stampAaudioPlayerCount + 1) {
             stampAaudioPlayerCount = 0
         }else{
             stampAaudioPlayerCount += 1
         }
+        
         audioPlayDelegate?.setAudio(audioName: name)
         audioPlayDelegate?.audioPlay(needsLoop: false)
     }
