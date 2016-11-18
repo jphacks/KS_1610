@@ -57,7 +57,7 @@ extension MainViewController {
                 
             }else if self.decisionMessage(type: 3, name: strValue) {
                 self.stampAudio(name: strValue)
-                DispatchQueue.main.async { self.addStamp(name: "buttonImage1") }//strValue) }
+                DispatchQueue.main.async { self.addStamp(name: strValue) }
                 
             }else{
                 self.setTime = strValue
@@ -132,7 +132,7 @@ extension MainViewController {
         switch pasteStampCount {
         case 0:
             stampBaseView.stampWidth01.constant = stampBaseView.stamp01.bounds.size.height
-            stampBaseView.stamp01.image = UIImage(named: name) // 音声と画像が同じ名前である必要がある
+            stampBaseView.stamp01.image = UIImage(named: name)
             stampBaseView.stamp01.bounceIn(from: .right)
         case 1:
             stampBaseView.stampWidth02.constant = stampBaseView.stamp02.bounds.size.height

@@ -33,14 +33,33 @@ class MainViewController: UIViewController {
     
     var stampBaseView: WakeUpView!
     var pasteStampCount: Int = 0
+    var outSANameString: [String] = ["", "", "", ""]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userDefault.set(0, forKey: "tapCount") // Reset score
+        userDefault.synchronize()
         
         webRTC()
+        
+        setupStamp()
+        makeStampList()
+        
         pagingView(selfNib: "", nibName: "StartUpView")
+    }
+    
+    func makeStampList() {
+        if((userDefault.object(forKey: "SAName")) != nil){
+            let objects = userDefault.object(forKey: "SAName") as? NSArray
+            
+            var i: Int = 0
+            for nameString in objects!{
+                outSANameString[i] = (nameString as! NSString) as String
+                i += 1
+            }
+        }
     }
     
     func alertView(title: String, message: String, buttonName: String){
