@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		0D985D711DC46395009EB50A /* AudioPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D985D701DC46395009EB50A /* AudioPlay.swift */; };
 		3A77F99016E19504B61C684A /* Pods_mezamaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D532DA86A269DF2C8D8D2585 /* Pods_mezamaShare.framework */; };
+		662BD6561DDE8E370051FFAB /* s_01_apple-pen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6471DDE8E370051FFAB /* s_01_apple-pen.mp3 */; };
+		662BD6571DDE8E370051FFAB /* s_02_apple.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6481DDE8E370051FFAB /* s_02_apple.mp3 */; };
+		662BD6581DDE8E370051FFAB /* s_03_asa-dayo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6491DDE8E370051FFAB /* s_03_asa-dayo.mp3 */; };
+		662BD6591DDE8E370051FFAB /* s_04_dododo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD64A1DDE8E370051FFAB /* s_04_dododo.mp3 */; };
+		662BD65A1DDE8E370051FFAB /* s_05_hai-okite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD64B1DDE8E370051FFAB /* s_05_hai-okite.mp3 */; };
+		662BD65B1DDE8E370051FFAB /* s_06_horihori.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD64C1DDE8E370051FFAB /* s_06_horihori.mp3 */; };
+		662BD65C1DDE8E370051FFAB /* s_07_oh-yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD64D1DDE8E370051FFAB /* s_07_oh-yes.mp3 */; };
+		662BD65D1DDE8E370051FFAB /* s_08_ohayo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD64E1DDE8E370051FFAB /* s_08_ohayo.mp3 */; };
+		662BD65E1DDE8E370051FFAB /* s_09_okiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD64F1DDE8E370051FFAB /* s_09_okiro.mp3 */; };
+		662BD65F1DDE8E370051FFAB /* s_10_pen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6501DDE8E370051FFAB /* s_10_pen.mp3 */; };
+		662BD6601DDE8E370051FFAB /* s_11_pineapple-pen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6511DDE8E370051FFAB /* s_11_pineapple-pen.mp3 */; };
+		662BD6611DDE8E370051FFAB /* s_12_pineapple.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6521DDE8E370051FFAB /* s_12_pineapple.mp3 */; };
+		662BD6621DDE8E370051FFAB /* s_13_ppap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6531DDE8E370051FFAB /* s_13_ppap.mp3 */; };
+		662BD6631DDE8E370051FFAB /* s_14_sukida.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6541DDE8E370051FFAB /* s_14_sukida.mp3 */; };
+		662BD6641DDE8E370051FFAB /* s_15_zugyuuuun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 662BD6551DDE8E370051FFAB /* s_15_zugyuuuun.mp3 */; };
 		667C26091DCEABE3001579F5 /* SimpleAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667C26081DCEABE3001579F5 /* SimpleAnimation.framework */; };
 		66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96B1DAF1042004BBEED /* Assets.xcassets */; };
 		66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B2D96D1DAF1042004BBEED /* LaunchScreen.storyboard */; };
@@ -70,6 +85,21 @@
 /* Begin PBXFileReference section */
 		0D985D701DC46395009EB50A /* AudioPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlay.swift; path = Classes/ViewController/AudioPlay.swift; sourceTree = "<group>"; };
 		49FECF0874B843B6C314E552 /* Pods-mezamaShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mezamaShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mezamaShare/Pods-mezamaShare.debug.xcconfig"; sourceTree = "<group>"; };
+		662BD6471DDE8E370051FFAB /* s_01_apple-pen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "s_01_apple-pen.mp3"; path = "Resources/Audio/StampAudio/s_01_apple-pen.mp3"; sourceTree = "<group>"; };
+		662BD6481DDE8E370051FFAB /* s_02_apple.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_02_apple.mp3; path = Resources/Audio/StampAudio/s_02_apple.mp3; sourceTree = "<group>"; };
+		662BD6491DDE8E370051FFAB /* s_03_asa-dayo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "s_03_asa-dayo.mp3"; path = "Resources/Audio/StampAudio/s_03_asa-dayo.mp3"; sourceTree = "<group>"; };
+		662BD64A1DDE8E370051FFAB /* s_04_dododo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_04_dododo.mp3; path = Resources/Audio/StampAudio/s_04_dododo.mp3; sourceTree = "<group>"; };
+		662BD64B1DDE8E370051FFAB /* s_05_hai-okite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "s_05_hai-okite.mp3"; path = "Resources/Audio/StampAudio/s_05_hai-okite.mp3"; sourceTree = "<group>"; };
+		662BD64C1DDE8E370051FFAB /* s_06_horihori.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_06_horihori.mp3; path = Resources/Audio/StampAudio/s_06_horihori.mp3; sourceTree = "<group>"; };
+		662BD64D1DDE8E370051FFAB /* s_07_oh-yes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "s_07_oh-yes.mp3"; path = "Resources/Audio/StampAudio/s_07_oh-yes.mp3"; sourceTree = "<group>"; };
+		662BD64E1DDE8E370051FFAB /* s_08_ohayo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_08_ohayo.mp3; path = Resources/Audio/StampAudio/s_08_ohayo.mp3; sourceTree = "<group>"; };
+		662BD64F1DDE8E370051FFAB /* s_09_okiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_09_okiro.mp3; path = Resources/Audio/StampAudio/s_09_okiro.mp3; sourceTree = "<group>"; };
+		662BD6501DDE8E370051FFAB /* s_10_pen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_10_pen.mp3; path = Resources/Audio/StampAudio/s_10_pen.mp3; sourceTree = "<group>"; };
+		662BD6511DDE8E370051FFAB /* s_11_pineapple-pen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "s_11_pineapple-pen.mp3"; path = "Resources/Audio/StampAudio/s_11_pineapple-pen.mp3"; sourceTree = "<group>"; };
+		662BD6521DDE8E370051FFAB /* s_12_pineapple.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_12_pineapple.mp3; path = Resources/Audio/StampAudio/s_12_pineapple.mp3; sourceTree = "<group>"; };
+		662BD6531DDE8E370051FFAB /* s_13_ppap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_13_ppap.mp3; path = Resources/Audio/StampAudio/s_13_ppap.mp3; sourceTree = "<group>"; };
+		662BD6541DDE8E370051FFAB /* s_14_sukida.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_14_sukida.mp3; path = Resources/Audio/StampAudio/s_14_sukida.mp3; sourceTree = "<group>"; };
+		662BD6551DDE8E370051FFAB /* s_15_zugyuuuun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s_15_zugyuuuun.mp3; path = Resources/Audio/StampAudio/s_15_zugyuuuun.mp3; sourceTree = "<group>"; };
 		667C26061DCEABC3001579F5 /* SimpleAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleAnimation.framework; path = Carthage/Build/iOS/SimpleAnimation.framework; sourceTree = "<group>"; };
 		667C26081DCEABE3001579F5 /* SimpleAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleAnimation.framework; path = Carthage/Build/iOS/SimpleAnimation.framework; sourceTree = "<group>"; };
 		66B2D9611DAF1042004BBEED /* mezamaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mezamaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +186,7 @@
 		0D985D721DC471B2009EB50A /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				662BD6261DDE8D960051FFAB /* StampAudio */,
 				66DB776E1DCF6CEA00D4F094 /* mezamashare_good-morning.mp3 */,
 				66DB776F1DCF6CEA00D4F094 /* mezamashare_okiro.mp3 */,
 				66DB77701DCF6CEA00D4F094 /* mezamashare_ppap4.mp3 */,
@@ -164,6 +195,28 @@
 				EA21558E1DC495020055643F /* bgm_01.mp3 */,
 			);
 			name = Audio;
+			sourceTree = "<group>";
+		};
+		662BD6261DDE8D960051FFAB /* StampAudio */ = {
+			isa = PBXGroup;
+			children = (
+				662BD6471DDE8E370051FFAB /* s_01_apple-pen.mp3 */,
+				662BD6481DDE8E370051FFAB /* s_02_apple.mp3 */,
+				662BD6491DDE8E370051FFAB /* s_03_asa-dayo.mp3 */,
+				662BD64A1DDE8E370051FFAB /* s_04_dododo.mp3 */,
+				662BD64B1DDE8E370051FFAB /* s_05_hai-okite.mp3 */,
+				662BD64C1DDE8E370051FFAB /* s_06_horihori.mp3 */,
+				662BD64D1DDE8E370051FFAB /* s_07_oh-yes.mp3 */,
+				662BD64E1DDE8E370051FFAB /* s_08_ohayo.mp3 */,
+				662BD64F1DDE8E370051FFAB /* s_09_okiro.mp3 */,
+				662BD6501DDE8E370051FFAB /* s_10_pen.mp3 */,
+				662BD6511DDE8E370051FFAB /* s_11_pineapple-pen.mp3 */,
+				662BD6521DDE8E370051FFAB /* s_12_pineapple.mp3 */,
+				662BD6531DDE8E370051FFAB /* s_13_ppap.mp3 */,
+				662BD6541DDE8E370051FFAB /* s_14_sukida.mp3 */,
+				662BD6551DDE8E370051FFAB /* s_15_zugyuuuun.mp3 */,
+			);
+			name = StampAudio;
 			sourceTree = "<group>";
 		};
 		66B2D9581DAF1042004BBEED = {
@@ -478,21 +531,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA68F8891DDC358C00EFCB5C /* FOT-CometStd-B.otf in Resources */,
+				662BD6571DDE8E370051FFAB /* s_02_apple.mp3 in Resources */,
+				662BD65C1DDE8E370051FFAB /* s_07_oh-yes.mp3 in Resources */,
 				66DB77831DCF711500D4F094 /* EnterRoomView.xib in Resources */,
 				66DB77841DCF711500D4F094 /* StampButtonView.xib in Resources */,
 				66DB77821DCF711500D4F094 /* CreateRoomView.xib in Resources */,
+				662BD65A1DDE8E370051FFAB /* s_05_hai-okite.mp3 in Resources */,
 				66DB77741DCF6CEA00D4F094 /* mezamashare_okiro.mp3 in Resources */,
+				662BD65E1DDE8E370051FFAB /* s_09_okiro.mp3 in Resources */,
+				662BD6621DDE8E370051FFAB /* s_13_ppap.mp3 in Resources */,
 				66B2D96F1DAF1042004BBEED /* LaunchScreen.storyboard in Resources */,
 				66DB77771DCF6CEA00D4F094 /* mezamashare_zugyuuuun.mp3 in Resources */,
 				66DB77851DCF711500D4F094 /* StartUpView.xib in Resources */,
 				66DB77871DCF711500D4F094 /* WakeUpView.xib in Resources */,
 				66DB77861DCF711500D4F094 /* WaitTimeView.xib in Resources */,
+				662BD6561DDE8E370051FFAB /* s_01_apple-pen.mp3 in Resources */,
+				662BD6591DDE8E370051FFAB /* s_04_dododo.mp3 in Resources */,
 				66DB77761DCF6CEA00D4F094 /* mezamashare_sukida.mp3 in Resources */,
 				66DB77811DCF711500D4F094 /* ClearView.xib in Resources */,
+				662BD6581DDE8E370051FFAB /* s_03_asa-dayo.mp3 in Resources */,
 				EA21558F1DC495020055643F /* bgm_01.mp3 in Resources */,
 				66B2D96C1DAF1042004BBEED /* Assets.xcassets in Resources */,
+				662BD6601DDE8E370051FFAB /* s_11_pineapple-pen.mp3 in Resources */,
 				66DB77751DCF6CEA00D4F094 /* mezamashare_ppap4.mp3 in Resources */,
+				662BD6641DDE8E370051FFAB /* s_15_zugyuuuun.mp3 in Resources */,
+				662BD6631DDE8E370051FFAB /* s_14_sukida.mp3 in Resources */,
 				EA35B9B81DC5AE2500625E17 /* Main.storyboard in Resources */,
+				662BD6611DDE8E370051FFAB /* s_12_pineapple.mp3 in Resources */,
+				662BD65F1DDE8E370051FFAB /* s_10_pen.mp3 in Resources */,
+				662BD65B1DDE8E370051FFAB /* s_06_horihori.mp3 in Resources */,
+				662BD65D1DDE8E370051FFAB /* s_08_ohayo.mp3 in Resources */,
 				66DB77731DCF6CEA00D4F094 /* mezamashare_good-morning.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
