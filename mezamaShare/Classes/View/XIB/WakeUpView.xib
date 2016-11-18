@@ -23,6 +23,9 @@
                         <constraint firstAttribute="width" secondItem="VDr-bO-pRM" secondAttribute="height" multiplier="343:40" id="b6L-3c-hWE"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user1Image" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-8e-atq">
+                    <rect key="frame" x="16" y="183" width="343" height="281"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM 6:31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-O3-eas">
                     <rect key="frame" x="16" y="68" width="343" height="70"/>
                     <constraints>
@@ -115,6 +118,8 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ifb-O3-eas" secondAttribute="trailing" constant="16" id="4FK-D1-C0K"/>
                 <constraint firstItem="bML-SQ-FDS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="4nW-Cs-YPK"/>
+                <constraint firstItem="mn9-In-HIR" firstAttribute="top" secondItem="KFS-8e-atq" secondAttribute="bottom" constant="8" id="5W1-EB-ubv"/>
+                <constraint firstAttribute="trailing" secondItem="KFS-8e-atq" secondAttribute="trailing" constant="16" id="5YL-bh-wBT"/>
                 <constraint firstItem="mn9-In-HIR" firstAttribute="top" secondItem="rvT-tL-zPX" secondAttribute="bottom" constant="8" id="5v6-z2-eEP"/>
                 <constraint firstItem="mn9-In-HIR" firstAttribute="height" secondItem="Shu-Mi-gCa" secondAttribute="height" multiplier="111:155" id="5yk-il-8m3"/>
                 <constraint firstItem="VDr-bO-pRM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="614-2I-E9L"/>
@@ -134,6 +139,7 @@
                 <constraint firstAttribute="trailing" secondItem="mn9-In-HIR" secondAttribute="trailing" constant="16" id="LGt-j6-a9b"/>
                 <constraint firstItem="mn9-In-HIR" firstAttribute="height" secondItem="yCa-vK-x9I" secondAttribute="height" multiplier="111:155" id="NaW-Oa-mWw"/>
                 <constraint firstAttribute="trailing" secondItem="bML-SQ-FDS" secondAttribute="trailing" constant="16" id="OGv-7u-Rbc"/>
+                <constraint firstItem="KFS-8e-atq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="OKn-6e-X4h"/>
                 <constraint firstItem="hWU-sf-R4p" firstAttribute="top" secondItem="yCa-vK-x9I" secondAttribute="bottom" constant="7" id="Ons-Xa-Da8"/>
                 <constraint firstAttribute="trailing" secondItem="DB2-ca-4xr" secondAttribute="trailing" constant="16" id="QQW-a9-7Mw"/>
                 <constraint firstAttribute="trailing" secondItem="3XP-rI-ZL0" secondAttribute="trailing" constant="16" id="Sy5-f3-RmG"/>
@@ -151,6 +157,7 @@
                 <constraint firstItem="mn9-In-HIR" firstAttribute="height" secondItem="U4W-qH-0Lp" secondAttribute="height" multiplier="111:155" id="iTl-Iq-Sel"/>
                 <constraint firstItem="ifb-O3-eas" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="kYJ-Qr-Uf0"/>
                 <constraint firstAttribute="trailing" secondItem="rvT-tL-zPX" secondAttribute="trailing" constant="41" id="m7k-4R-1c1"/>
+                <constraint firstItem="KFS-8e-atq" firstAttribute="top" secondItem="ly7-3m-hAG" secondAttribute="bottom" constant="8" id="n22-HT-wZ2"/>
                 <constraint firstItem="2Mj-iD-lfM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qOE-uY-EeC"/>
                 <constraint firstItem="Shu-Mi-gCa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="s6h-5c-IBe"/>
                 <constraint firstItem="3XP-rI-ZL0" firstAttribute="height" secondItem="mn9-In-HIR" secondAttribute="height" multiplier="155:111" id="sp6-9i-A6v"/>
@@ -194,5 +201,6 @@
         <image name="fightImage" width="414" height="153"/>
         <image name="imaImage" width="126" height="41"/>
         <image name="nonwakeImage" width="356" height="41"/>
+        <image name="user1Image" width="275" height="275"/>
     </resources>
 </document>
