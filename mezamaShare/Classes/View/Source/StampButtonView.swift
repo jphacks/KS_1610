@@ -29,13 +29,16 @@ class StampButtonView: UIView {
     private let userDefault = UserDefaults.standard
     private var tapCount: Int = 0
     
+    var outSANameString: [String] = ["", "", "", ""]
     
-//    let audioPlay = AudioPlay()
+    
     let audioPlay: [AudioPlay] = [AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay(), AudioPlay()]
     var audioPlayerCount: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        makeStampList()
         
         countLabel.text = "100"
         countLabel.font = UIFont(name: "CometStd-B", size: 30)
@@ -44,7 +47,24 @@ class StampButtonView: UIView {
         self.userDefault.synchronize()
     }
     
+    func makeStampList() {
+        if((userDefault.object(forKey: "SAName")) != nil){
+            let objects = userDefault.object(forKey: "SAName") as? NSArray
+            
+            var i: Int = 0
+            for nameString in objects!{
+                outSANameString[i] = (nameString as! NSString) as String
+                i += 1
+            }
+        }
+    }
+    
     func buttonSetup(){
+        bkImage1.image = UIImage(named: outSANameString[0])
+        bkImage2.image = UIImage(named: outSANameString[1])
+        bkImage3.image = UIImage(named: outSANameString[2])
+        bkImage4.image = UIImage(named: outSANameString[3])
+        
         bkImage1.layer.cornerRadius = 10
         bkImage2.layer.cornerRadius = 10
         bkImage3.layer.cornerRadius = 10

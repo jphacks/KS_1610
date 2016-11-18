@@ -9,23 +9,23 @@
 extension MainViewController {
     // Alert button.
     func onTapButton1(sender: UIButton) {
-        send("mezamashare_zugyuuuun")
-        stampAudio(name: "mezamashare_zugyuuuun")
+        send(outSANameString[0])
+        stampAudio(name: outSANameString[0])
     }
     
     func onTapButton2(sender: UIButton) {
-        send("mezamashare_ppap4")
-        stampAudio(name: "mezamashare_ppap4")
+        send(outSANameString[1])
+        stampAudio(name: outSANameString[1])
     }
     
     func onTapButton3(sender: UIButton) {
-        send("mezamashare_okiro")
-        stampAudio(name: "mezamashare_okiro")
+        send(outSANameString[2])
+        stampAudio(name: outSANameString[2])
     }
     
     func onTapButton4(sender: UIButton) {
-        send("mezamashare_sukida")
-        stampAudio(name: "mezamashare_sukida")
+        send(outSANameString[3])
+        stampAudio(name: outSANameString[3])
     }
     
     func onTapButton5(sender: UIButton) {
