@@ -17,7 +17,7 @@ extension MainViewController {
     }
     
     func setupStamp() {
-        let saName: [String] = ["A","B","C","D","E","F","G","H","I"] // ここにスタンプ素材をすべてセット
+        let saName: [String] = ["s_01_apple-pen","s_02_apple","s_03_asa-dayo","s_04_dododo","s_05_hai-okite","s_06_horihori","s_07_oh-yes","s_08_ohayo","s_09_okiro", "s_10_pen", "s_11_pineapple-pen", "s_12_pineapple", "s_13_ppap", "s_14_sukida", "s_15_zugyuuuun"]
         var outSAName: [Int] = [0, 0, 0, 0]
         var outSANameString: [String] = ["", "", "", ""]
         
