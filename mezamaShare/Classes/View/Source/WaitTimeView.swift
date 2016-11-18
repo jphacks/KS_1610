@@ -10,18 +10,21 @@ import UIKit
 
 class WaitTimeView: UIView {
     @IBOutlet weak var roomNameLabel: UILabel!
-    @IBOutlet weak var myID: UILabel!
     private let userDefault = UserDefaults.standard
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
         roomNameLabel.font = UIFont(name: "CometStd-B", size: 20)
-        myID.font = UIFont(name: "CometStd-B", size: 20)
         
         if userDefault.object(forKey: "myID") != nil {
             roomNameLabel.text = userDefault.object(forKey: "myID") as? String
-            myID.text = userDefault.object(forKey: "myID") as? String
         }
+        
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector(("checkTime:")), userInfo: nil, repeats: true)
+    }
+    
+    func checkTime(sender: Timer) {
+        print("on timer")
     }
 }
