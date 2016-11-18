@@ -13,19 +13,30 @@ class EnterRoomView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    let userDefault = UserDefaults.standard
     var items: [String] = []
     weak var callback: UIViewController?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // -----
-        let realm = try! Realm()
+//        let realm = try! Realm()
+//        
+//        var count: Int = 0
+//        for user in realm.objects(Id.self) {
+//            NSLog("count:\(count)")
+//            items.append(user.id)
+//            count += 1
+//        }
         
-        var count: Int = 0
-        for user in realm.objects(Id.self) {
-            NSLog("count:\(count)")
-            items.append(user.id)
-            count += 1
+        if ((userDefault.object(forKey: "id")) != nil) {
+            let objects = userDefault.object(forKey: "id") as? NSArray
+            
+            var i: Int = 0
+            for nameString in objects!{
+                items.append((nameString as! NSString) as String)
+                i += 1
+            }
         }
         // -----
         
@@ -41,17 +52,21 @@ class EnterRoomView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let strTo: String = (self.items[(indexPath as NSIndexPath).row] as String)
         
-        let youID = Id()
-        let realm = try! Realm()
+//        let youID = Id()
+//        let realm = try! Realm()
+//        
+//        try! realm.write({
+//            realm.deleteAll()
+//        })
+//        
+//        youID.id = strTo
+//        try! realm.write {
+//            realm.add(youID)
+//        }
+        userDefault.removeObject(forKey: "id")
         
-        try! realm.write({
-            realm.deleteAll()
-        })
-        
-        youID.id = strTo
-        try! realm.write {
-            realm.add(youID)
-        }
+        userDefault.set([strTo], forKey:"id")
+        userDefault.synchronize()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
